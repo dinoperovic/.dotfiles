@@ -1,0 +1,46 @@
+<snippet>
+    <content><![CDATA[
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext_lazy as _
+
+from cms.cms_toolbars import ADMIN_MENU_IDENTIFIER, ADMINISTRATION_BREAK
+from cms.toolbar.items import Break, SubMenu
+from cms.toolbar_base import CMSToolbar
+from cms.toolbar_pool import toolbar_pool
+
+from .models import ${2/(.+)/\u$1/g}
+
+${1/(.+)/\U$1/g}_MENU_IDENTIFIER = '${1:dummy}'
+${1/(.+)/\U$1/g}_MENU_LABEL = _('${1/(.+)/\u$1/g}')
+
+
+@toolbar_pool.register
+class ${1/(.+)/\u$1/g}Toolbar(CMSToolbar):
+    watch_models = [${2/(.+)/\u$1/g}]
+
+    def populate(self):
+        admin_menu = self.toolbar.get_or_create_menu(ADMIN_MENU_IDENTIFIER, self.current_site.name)
+        position = admin_menu.get_alphabetical_insert_position(${1/(.+)/\U$1/g}_MENU_LABEL, SubMenu)
+        if not position:
+            position = admin_menu.find_first(Break, identifier=ADMINISTRATION_BREAK) + 1
+            admin_menu.add_break('custom-break', position=position)
+
+        menu = admin_menu.get_or_create_menu('${1:dummy}-admin-menu', ${1/(.+)/\U$1/g}_MENU_LABEL, position=position)
+
+        ${2:model}_add_url = reverse('admin:${1:dummy}_${2:model}_add')
+        menu.add_sideframe_item(_('${2/(.+)/\u$1/g}${3:s} list'), url=reverse('admin:${1:dummy}_${2:model}_changelist'))
+        menu.add_modal_item(_('Add New ${2/(.+)/\u$1/g}'), url=${2:model}_add_url)
+
+        if self.is_current_app:
+            menu = self.toolbar.get_or_create_menu(${1/(.+)/\U$1/g}_MENU_IDENTIFIER, ${1/(.+)/\U$1/g}_MENU_LABEL)
+            add_menu = menu.get_or_create_menu('${1:dummy}-menu-add', _('Add New'))
+            add_menu.add_modal_item(_('${2/(.+)/\u$1/g}'), url=${2:model}_add_url)
+
+]]></content>
+    <tabTrigger>cms_toolbars</tabTrigger>
+    <scope>source.python</scope>
+    <description>Start off Django cms_toolbars.py</description>
+</snippet>

@@ -1,0 +1,37 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"ayu",
+		"Base16 Color Schemes",
+		"BracketHighlighter",
+		"Djaneiro",
+		"Dockerfile Syntax Highlighting",
+		"DotENV",
+		"Emmet",
+		"fish",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"INI",
+		"nginx",
+		"Package Control",
+		"Pug",
+		"Sass",
+		"SideBarEnhancements",
+		"SSH Config",
+		"SublimeLinter",
+		"SublimeLinter-contrib-sass-lint",
+		"SublimeLinter-eslint",
+		"SublimeLinter-flake8",
+		"SublimeLinter-json",
+		"SublimeLinter-pylint",
+		"TOML",
+		"Tomorrow Color Schemes",
+		"Vue Syntax Highlight"
+	]
+}

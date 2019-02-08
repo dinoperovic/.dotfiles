@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.utils.translation import ugettext_lazy as _
+
+from cms.app_base import CMSApp
+from cms.apphook_pool import apphook_pool
+
+
+@apphook_pool.register
+class ${1:Dummy}App(CMSApp):
+    name = _('${1:Dummy}')
+
+    def get_urls(self, page=None, language=None, **kwargs):
+        return ['${2:dummy}.urls']
+
+]]></content>
+    <tabTrigger>cms_apps</tabTrigger>
+    <scope>source.python</scope>
+    <description>Start off Django cms_apps.py</description>
+</snippet>

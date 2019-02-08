@@ -1,0 +1,6 @@
+rules:
+  mixins-before-declarations: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  one-declaration-per-line: 0
+  no-important: 0

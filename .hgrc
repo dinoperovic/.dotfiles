@@ -1,0 +1,12 @@
+[ui]
+username = Dino Perovic <dino.perovic@gmail.com>
+
+[diff]
+git = True
+
+[extensions]
+hgext.extdiff =
+color =
+pager =
+rebase = 
+

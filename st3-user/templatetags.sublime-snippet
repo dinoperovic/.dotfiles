@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.template import Library
+
+register = Library()
+
+
+@register.${1:simple_tag}
+def ${2:dummy}($3):
+    ${4:pass}
+
+]]></content>
+    <tabTrigger>templatetags</tabTrigger>
+    <scope>source.python</scope>
+    <description>Start off Django templatetags library</description>
+</snippet>

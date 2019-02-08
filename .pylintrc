@@ -1,0 +1,9 @@
+[MESSAGES CONTROL]
+disable=
+    missing-docstring,
+    unused-argument,
+    import-error,
+    no-self-use
+
+[FORMAT]
+max-line-length=119

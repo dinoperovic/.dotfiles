@@ -1,0 +1,6 @@
+[user]
+	name = Dino Perovic
+	email = dino.perovic@gmail.com
+
+[push]
+    default = simple

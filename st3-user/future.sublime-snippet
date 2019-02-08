@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[from __future__ import unicode_literals]]></content>
+  <tabTrigger>future</tabTrigger>
+  <scope>source.python</scope>
+  <description>Add python2 support</description>
+</snippet>
