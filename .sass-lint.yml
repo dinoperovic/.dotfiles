@@ -4,3 +4,4 @@ rules:
   force-pseudo-nesting: 0
   one-declaration-per-line: 0
   no-important: 0
+  single-line-per-selector: 0
