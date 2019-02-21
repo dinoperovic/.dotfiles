@@ -5,3 +5,4 @@ rules:
   one-declaration-per-line: 0
   no-important: 0
   single-line-per-selector: 0
+  class-name-format: 0
