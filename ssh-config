@@ -132,3 +132,7 @@ Host pinetreemljet.com
 Host strath.hr
   User root
   HostName 167.99.211.137
+
+Host egk.hr
+  User root
+  HostName 134.209.95.113
