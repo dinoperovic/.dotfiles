@@ -5,6 +5,7 @@ ln -sf "`pwd`/.eslintrc.js" ~/.eslintrc.js
 ln -sf "`pwd`/.flake8" ~/.flake8
 ln -sf "`pwd`/.gitconfig" ~/.gitconfig
 ln -sf "`pwd`/.hgrc" ~/.hgrc
+ln -sf "`pwd`/.prettierrc.yml" ~/.prettierrc.yml
 ln -sf "`pwd`/.pylintrc" ~/.pylintrc
 ln -sf "`pwd`/.pypirc" ~/.pypirc
 ln -sf "`pwd`/.sass-lint.yml" ~/.sass-lint.yml

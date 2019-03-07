@@ -136,3 +136,7 @@ Host strath.hr
 Host egk.hr
   User root
   HostName 134.209.95.113
+
+Host ecuga.com
+  User root
+  HostName 167.99.210.95
