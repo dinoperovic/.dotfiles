@@ -5,6 +5,7 @@ module.exports = {
     'plugin:vue/recommended',
     'prettier',
     'prettier/react',
-    'prettier/vue'
-  ]
+    'prettier/vue',
+  ],
+  plugins: ['react-hooks'],
 }
