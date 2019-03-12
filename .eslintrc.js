@@ -1,11 +1,16 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
     'plugin:vue/recommended',
+    'plugin:react/recommended',
     'prettier',
-    'prettier/react',
     'prettier/vue',
+    'prettier/react'
   ],
-  plugins: ['react-hooks'],
+  plugins: ['vue', 'react', 'react-hooks'],
+  env: {
+    es6: true,
+    node: true,
+    browser: true
+  }
 }
