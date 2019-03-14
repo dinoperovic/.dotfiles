@@ -11,5 +11,5 @@
     "files.trimTrailingWhitespace": true,
     "editor.fontFamily": "Roboto Mono",
     "terminal.integrated.lineHeight": 1.1,
-    "editor.lineHeight": 23
+    "editor.lineHeight": 24
 }
