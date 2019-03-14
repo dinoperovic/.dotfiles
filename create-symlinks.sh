@@ -19,3 +19,6 @@ ln -sf "`pwd`/ssh-config" ~/.ssh/config
 
 # Sublime Text
 ln -sf "`pwd`/st3-user" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+
+# VSCode
+ln -sf "`pwd`/vscode-settings.json" ~/Library/Application\ Support/Code/User/settings.json

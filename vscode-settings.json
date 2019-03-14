@@ -1,0 +1,9 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Roboto Mono, Menlo, Monaco, 'Courier New', monospace",
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Ocean",
+    "editor.wordWrap": "on"
+}
