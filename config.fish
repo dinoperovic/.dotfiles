@@ -25,6 +25,9 @@ alias d "docker"
 alias dc "docker-compose"
 alias dm "docker-machine"
 
+# React Native
+alias rn "react-native"
+
 # Misc
 alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
