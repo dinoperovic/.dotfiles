@@ -140,3 +140,7 @@ Host egk.hr
 Host ecuga.com
   User root
   HostName 167.99.210.95
+
+Host ivid.hr
+  User root
+  HostName 104.248.83.186
