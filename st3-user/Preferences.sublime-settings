@@ -12,7 +12,7 @@
 		"__pycache__",
 		".pytest_cache"
 	],
-	"font_face": "Roboto Mono",
+	"font_face": "Monaco",
 	"font_options":
 	[
 		"gray_antialias",
