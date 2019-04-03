@@ -18,4 +18,4 @@ ln -sf "`pwd`/fishfile" ~/.config/fish/fishfile
 ln -sf "`pwd`/ssh-config" ~/.ssh/config
 
 # Sublime Text
-ln -sf "`pwd`/st3-user" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+# ln -sf "`pwd`/st3-user" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
