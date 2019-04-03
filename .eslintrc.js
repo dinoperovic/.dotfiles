@@ -7,7 +7,7 @@ module.exports = {
     'prettier/vue',
     'prettier/react'
   ],
-  plugins: ['vue', 'react', 'react-hooks'],
+  plugins: ['vue', 'react', 'react-hooks', 'react-native'],
   env: {
     es6: true,
     node: true,
