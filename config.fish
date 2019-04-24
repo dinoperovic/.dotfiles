@@ -11,6 +11,9 @@ alias ppy "pipenv run python"
 alias pdj "pipenv run python manage.py"
 alias pdja "pipenv run django-admin"
 
+# Poetry
+set PATH ~/.poetry/bin $PATH 
+
 # Git
 alias g "git"
 alias gd "git diff"
