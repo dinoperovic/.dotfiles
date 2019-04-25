@@ -4,15 +4,9 @@ alias wp "which python"
 alias dj "python manage.py"
 alias dja "django-admin"
 
-# Pipenv
-alias p "pipenv"
-alias pr "pipenv run"
-alias ppy "pipenv run python"
-alias pdj "pipenv run python manage.py"
-alias pdja "pipenv run django-admin"
-
 # Poetry
 set PATH ~/.poetry/bin $PATH 
+alias pdj "poetry run python manage.py"
 
 # Git
 alias g "git"
