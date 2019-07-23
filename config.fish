@@ -1,3 +1,6 @@
+# Generic
+set PATH /usr/local/sbin $PATH
+
 # Python & Django
 alias py "python"
 alias wp "which python"
