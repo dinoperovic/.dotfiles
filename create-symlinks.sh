@@ -9,6 +9,7 @@ ln -sf "`pwd`/.prettierrc.yml" ~/.prettierrc.yml
 ln -sf "`pwd`/.pylintrc" ~/.pylintrc
 ln -sf "`pwd`/.pypirc" ~/.pypirc
 ln -sf "`pwd`/.sass-lint.yml" ~/.sass-lint.yml
+ln -sf "`pwd`/.hyper.js" ~/.hyper.js
 
 # Fish
 ln -sf "`pwd`/config.fish" ~/.config/fish/config.fish
