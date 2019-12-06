@@ -138,17 +138,33 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    // hyper-pane
     paneNavigation: {
       hotkeys: {
         navigation: {
-          up: 'cmd+up',
-	  down: 'cmd+down',
-	  left: 'cmd+left',
-	  right: 'cmd+right',
-	}
+          up: 'Cmd+up',
+          down: 'Cmd+down',
+          left: 'Cmd+left',
+          right: 'Cmd+right',
+        }
       },
       showIndicators: false,
-    },	  
+    },
+
+    // an-old-hype
+    themeSettings: {
+      opacity: 0.9,
+      // vader, yoda, threePO, r2, luke (default), falcon
+      style: 'luke',
+    },
+
+    // summon
+    summon: {
+      hideDock: true,
+      hideOnBlur: true,
+      hotkey: 'Ctrl+;',
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -157,7 +173,15 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-pane", "hyper-dracula"],
+  plugins: [
+    "hyper-pane",
+    "hypercwd",
+    "hyperterm-dibdabs",
+    "hyper-search",
+    "hyper-statusline",
+    "an-old-hype",
+    "hyperterm-summon"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
