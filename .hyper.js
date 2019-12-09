@@ -161,8 +161,8 @@ module.exports = {
 
     // summon
     summon: {
-      hideDock: false,
-      hideOnBlur: false,
+      hideDock: true,
+      hideOnBlur: true,
       hotkey: 'Ctrl+;',
     }
   },
