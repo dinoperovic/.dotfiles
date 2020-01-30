@@ -8,7 +8,9 @@ alias dj "python manage.py"
 alias dja "django-admin"
 
 # Poetry
-set PATH ~/.poetry/bin $PATH 
+set PATH ~/.poetry/bin $PATH
+alias p "poetry"
+alias pr "poetry run" 
 alias pdj "poetry run python manage.py"
 
 # Git
