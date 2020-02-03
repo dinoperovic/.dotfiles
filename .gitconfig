@@ -4,3 +4,5 @@
 
 [push]
     default = simple
+[code]
+    editor = code --wait
