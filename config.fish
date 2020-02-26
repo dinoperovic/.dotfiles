@@ -54,15 +54,9 @@ alias cdpl "cd $PLAYGROUND"
 alias cdx "cd $XCODE"
 alias cdgo "cd $GO"
 
-# Editor
-alias st "subl"
-
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
-
-# Set virtualenv options
-set -x PIPENV_VENV_IN_PROJECT 1
 
 # Openssl
 set -x LDFLAGS -L/usr/local/opt/openssl/lib
