@@ -12,7 +12,8 @@ module.exports = {
     fontSize: 15,
 
     // font family with optional fallbacks
-    fontFamily: 'Monaco, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      'Monaco, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -147,16 +148,9 @@ module.exports = {
           down: 'Cmd+down',
           left: 'Cmd+left',
           right: 'Cmd+right',
-        }
+        },
       },
       showIndicators: false,
-    },
-
-    // an-old-hype
-    themeSettings: {
-      opacity: 0.9,
-      // vader, yoda, threePO, r2, luke (default), falcon
-      style: 'luke',
     },
 
     // summon
@@ -164,7 +158,7 @@ module.exports = {
       hideDock: true,
       hideOnBlur: true,
       hotkey: 'Ctrl+;',
-    }
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -174,13 +168,13 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-pane",
-    "hypercwd",
-    "hyperterm-dibdabs",
-    "hyper-search",
-    "hyper-statusline",
-    "an-old-hype",
-    "hyperterm-summon"
+    'hyper-pane',
+    'hypercwd',
+    'hyperterm-dibdabs',
+    'hyper-search',
+    'hyper-statusline',
+    'hyperterm-summon',
+    "hyper-altair"
   ],
 
   // in development, you can create a directory under
@@ -192,4 +186,4 @@ module.exports = {
     // Example
     // 'window:devtools': 'cmd+alt+o',
   },
-};
+}
