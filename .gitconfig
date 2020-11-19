@@ -6,3 +6,5 @@
     default = simple
 [core]
     editor = code --wait
+[pull]
+	rebase = true
