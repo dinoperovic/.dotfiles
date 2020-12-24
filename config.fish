@@ -17,6 +17,7 @@ alias g "git"
 alias gd "git diff"
 alias gl "git pull"
 alias gm "git merge"
+alias gb "git branch"
 alias gp "git push"
 alias gco "git checkout"
 alias gst "git status"
@@ -28,6 +29,9 @@ alias dm "docker-machine"
 
 # React Native
 alias rn "react-native"
+
+# Flutter
+set PATH ~/dev/flutter/bin $PATH
 
 # Misc
 alias tree "tree -C"
@@ -53,6 +57,10 @@ alias cdb "cd $BACKUP"
 alias cdpl "cd $PLAYGROUND"
 alias cdx "cd $XCODE"
 alias cdgo "cd $GO"
+
+# Go
+set -x GOPATH $GO
+set PATH $GOPATH/bin $PATH
 
 # Set language
 set -x LC_ALL en_US.UTF-8
