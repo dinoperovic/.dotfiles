@@ -31,7 +31,7 @@ alias dm "docker-machine"
 alias rn "react-native"
 
 # Flutter
-set PATH ~/dev/flutter/bin $PATH
+set PATH ~/Dev/flutter/bin $PATH
 
 # Misc
 alias tree "tree -C"
