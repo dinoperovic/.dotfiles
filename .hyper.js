@@ -175,7 +175,7 @@ module.exports = {
     "hyper-statusline",
     "hyperterm-summon",
     "hyper-highlight-active-pane",
-    "hyper-dracula",
+    "hyper-darkmatter",
   ],
 
   // in development, you can create a directory under

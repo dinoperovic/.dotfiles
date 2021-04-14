@@ -62,9 +62,15 @@ alias cdgo "cd $GO"
 set -x GOPATH $GO
 set PATH $GOPATH/bin $PATH
 
+# Nix
+set PATH ~/.nix-profile/bin $PATH
+
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
 # Openssl
 set -x LDFLAGS -L/usr/local/opt/openssl/lib
+
+# Google Cloud
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
