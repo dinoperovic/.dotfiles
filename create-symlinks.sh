@@ -5,6 +5,7 @@ ln -sf "`pwd`/.flake8" ~/.flake8
 ln -sf "`pwd`/.gitconfig" ~/.gitconfig
 ln -sf "`pwd`/.hgrc" ~/.hgrc
 ln -sf "`pwd`/.pypirc" ~/.pypirc
+ln -sf "`pwd`/.zshrc" ~/.zshrc
 ln -sf "`pwd`/.hyper.js" ~/.hyper.js
 
 # Starship

@@ -24,8 +24,7 @@ alias gst "git status"
 
 # Docker
 alias d "docker"
-alias dc "docker-compose"
-alias dm "docker-machine"
+alias dc "docker compose"
 
 # React Native
 alias rn "react-native"
