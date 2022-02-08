@@ -1,6 +1,7 @@
 [user]
     name = Dino Perovic
     email = dino.perovic@gmail.com
+	signingkey = 1B733928ED233537F83837737299C47D39E5D318
 
 [push]
     default = simple
@@ -8,3 +9,5 @@
     editor = code --wait
 [pull]
     rebase = true
+[commit]
+	gpgsign = true

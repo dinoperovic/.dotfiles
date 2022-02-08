@@ -1,5 +1,5 @@
 # Generic
-set PATH /usr/local/sbin $PATH
+set PATH /usr/local/sbin ~/.local/bin $PATH
 
 # Python & Django
 alias py "python"
@@ -8,7 +8,6 @@ alias dj "python manage.py"
 alias dja "django-admin"
 
 # Poetry
-set PATH ~/.poetry/bin $PATH
 alias p "poetry"
 alias pdj "poetry run python manage.py"
 
@@ -70,6 +69,9 @@ set -x LANG en_US.UTF-8
 
 # Openssl
 set -x LDFLAGS -L/usr/local/opt/openssl/lib
+
+# GPG
+set -gx GPG_TTY (tty)
 
 # Google Cloud
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
