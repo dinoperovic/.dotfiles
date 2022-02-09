@@ -1,5 +1,3 @@
-jorgebucaran/fisher
-IlanCosman/tide
 bonds/fisherman-pyenv
 bonds/fisherman-rbenv
 edc/bass
@@ -9,3 +7,6 @@ jethrokuan/z
 joseluisq/gitnow
 franciscolourenco/done
 jethrokuan/fzf
+jorgebucaran/fisher
+IlanCosman/tide@v5
+jorgebucaran/autopair.fish
