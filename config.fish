@@ -63,6 +63,10 @@ alias cdgo "cd $GO"
 set -x GOPATH $GO
 set PATH $GOPATH/bin $PATH
 
+# Neovim
+alias vi "nvim"
+alias vim "nvim"
+
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
