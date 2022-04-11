@@ -1,5 +1,6 @@
 # Generic
 set PATH /usr/local/sbin ~/.local/bin $PATH
+set -x EDITOR code
 
 # Python & Django
 alias py "python"
@@ -34,6 +35,9 @@ alias rn "react-native"
 
 # Flutter
 set PATH ~/Dev/flutter/bin $PATH
+
+# Node
+set --universal nvm_default_version latest
 
 # Misc
 alias tree "tree -C"
