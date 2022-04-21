@@ -38,7 +38,6 @@ set PATH ~/Dev/flutter/bin $PATH
 
 # Node
 set --universal nvm_default_version latest
-set -x NODE_OPTIONS --openssl-legacy-provider
 
 # Misc
 alias tree "tree -C"
