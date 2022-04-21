@@ -38,6 +38,7 @@ set PATH ~/Dev/flutter/bin $PATH
 
 # Node
 set --universal nvm_default_version latest
+set -x NODE_OPTIONS --openssl-legacy-provider
 
 # Misc
 alias tree "tree -C"
@@ -52,7 +53,6 @@ set -x PUBLIC $DEV/public
 set -x APPS $DEV/apps
 set -x PLAYGROUND $DEV/playground
 set -x XCODE $DEV/xcode
-set -x GO $DEV/go
 alias cdd "cd $DEV"
 alias cdp "cd $PROJECTS"
 alias cdap "cd $APPS"
@@ -61,11 +61,6 @@ alias cda "cd $ASSETS"
 alias cdb "cd $BACKUP"
 alias cdpl "cd $PLAYGROUND"
 alias cdx "cd $XCODE"
-alias cdgo "cd $GO"
-
-# Go
-set -x GOPATH $GO
-set PATH $GOPATH/bin $PATH
 
 # Neovim
 alias vi "nvim"
