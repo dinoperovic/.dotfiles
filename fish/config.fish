@@ -37,7 +37,7 @@ alias rn "react-native"
 set PATH ~/Dev/flutter/bin $PATH
 
 # Node
-set --universal nvm_default_version latest
+set --universal nvm_default_version v17.9.0
 
 # Misc
 alias tree "tree -C"
@@ -61,10 +61,6 @@ alias cdb "cd $BACKUP"
 alias cdpl "cd $PLAYGROUND"
 alias cdx "cd $XCODE"
 
-# Neovim
-alias vi "nvim"
-alias vim "nvim"
-
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
@@ -76,5 +72,5 @@ set -x LDFLAGS -L/usr/local/opt/openssl/lib
 set -gx GPG_TTY (tty)
 
 # Google Cloud
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
