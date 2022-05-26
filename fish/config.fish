@@ -37,7 +37,7 @@ alias rn "react-native"
 set PATH ~/Dev/flutter/bin $PATH
 
 # Node
-set --universal nvm_default_version v17.9.0
+set --universal nvm_default_version v16.15.0
 
 # Misc
 alias tree "tree -C"
