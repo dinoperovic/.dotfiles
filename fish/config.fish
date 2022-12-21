@@ -2,6 +2,10 @@
 set PATH /usr/local/sbin ~/.local/bin $PATH
 set -x EDITOR code
 
+# Vim
+alias vi "nvim"
+alias vim "nvim"
+
 # Python & Django
 alias py "python"
 alias wp "which python"
@@ -66,7 +70,7 @@ set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
 # Openssl
-set -x LDFLAGS -L/usr/local/opt/openssl/lib
+set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib'
 
 # GPG
 set -gx GPG_TTY (tty)

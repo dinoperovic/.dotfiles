@@ -16,4 +16,14 @@ ln -sf "`pwd`/fish/config.fish" ~/.config/fish/config.fish
 ln -sf "`pwd`/fish/fishfile" ~/.config/fish/fishfile
 ln -sf "`pwd`/fish/conf.d/_brew.fish" ~/.config/fish/conf.d/_brew.fish
 
+# Nvim
+echo "Linking Nvim..."
+mkdir -p ~/.config/nvim
+ln -sf "`pwd`/nvim/init.lua" ~/.config/nvim/init.lua
+
+# Gnu GPG
+echo "Linking GPG..."
+mkdir -p ~/.gnupg
+ln -sf "`pwd`/.gnupg/gpg-agent.conf" ~/.gnupg/gpg-agent.conf
+
 echo "Done!"
