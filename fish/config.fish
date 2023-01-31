@@ -15,6 +15,7 @@ alias dja "django-admin"
 # Poetry
 alias p "poetry"
 alias pdj "poetry run python manage.py"
+alias pdja "poetry run django-admin"
 
 # Git
 alias g "git"
