@@ -4,4 +4,4 @@ Collection of my dotfiles.
 
 ## Setup
 
-To install run `./create-symlinks.sh`
+To install run `./install.sh`
