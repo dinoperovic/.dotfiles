@@ -80,3 +80,6 @@ set -gx GPG_TTY (tty)
 # Google Cloud
 source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
 
+# Starship prompt
+starship init fish | source
+
