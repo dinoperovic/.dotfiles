@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for module in git gpg fish nvim pip zsh starship
+for module in git gpg fish nvim pip zsh starship alacritty
 do
   echo "Installing $module..."
   sh -c "cd $module && ./install.sh"
