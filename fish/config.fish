@@ -50,6 +50,7 @@ alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
 
 # Dev directories & aliases
+set -x DOTFILES $HOME/.dotfiles
 set -x DEV $HOME/Dev
 set -x PROJECTS $DEV/projects
 set -x ASSETS $DEV/assets
@@ -58,6 +59,7 @@ set -x PUBLIC $DEV/public
 set -x APPS $DEV/apps
 set -x PLAYGROUND $DEV/playground
 set -x XCODE $DEV/xcode
+alias cddot "cd $DOTFILES"
 alias cdd "cd $DEV"
 alias cdp "cd $PROJECTS"
 alias cdap "cd $APPS"
