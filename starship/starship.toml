@@ -68,7 +68,7 @@ $env_var\
 $crystal\
 $custom\
 $sudo\
-$cmd_duration\
+$cmd_duration__\
 $line_break\
 $jobs\
 $battery\
