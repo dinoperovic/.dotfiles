@@ -3,14 +3,18 @@ set PATH /usr/local/sbin ~/.local/bin $PATH
 set -x EDITOR code
 
 # Vim
-alias vi "nvim"
-alias vim "nvim"
+alias vi "lvim"
+alias vim "lvim"
+alias nvim "lvim"
 
 # Python & Django
 alias py "python"
 alias wp "which python"
 alias dj "python manage.py"
 alias dja "django-admin"
+
+# Rust
+set PATH ~/.cargo/bin $PATH
 
 # Poetry
 alias p "poetry"
