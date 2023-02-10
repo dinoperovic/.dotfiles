@@ -1,6 +1,7 @@
 # Generic
 set PATH /usr/local/sbin ~/.local/bin $PATH
-set -x EDITOR code
+set -x EDITOR lvim
+set -x VISUAL lvim
 
 # Vim
 alias vi "lvim"

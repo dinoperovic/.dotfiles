@@ -6,7 +6,7 @@
 [push]
     default = simple
 [core]
-    editor = code --wait
+    editor = vim
 [pull]
     rebase = true
 [commit]
