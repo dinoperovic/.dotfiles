@@ -77,5 +77,3 @@ export LDFLAGS=-L/usr/local/opt/openssl/lib
 # Google Cloud
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
