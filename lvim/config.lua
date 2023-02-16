@@ -172,6 +172,7 @@ lvim.plugins = {
   { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' },
   { "mg979/vim-visual-multi" },
 
+  -- GH copilot
   { "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
@@ -182,10 +183,12 @@ lvim.plugins = {
       end, 100)
     end,
   },
-
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
   },
+
+  -- Themes
+  { "catppuccin/nvim" },
 }
 
 -- Trouble
