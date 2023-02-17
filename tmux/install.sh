@@ -1,4 +1,5 @@
 #!/bin/sh
+brew install tmux
 mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+[ ! -d "$HOME/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ln -sf "`pwd`/.tmux.conf" ~/.tmux.conf

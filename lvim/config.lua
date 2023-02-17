@@ -49,7 +49,6 @@ lvim.lsp.installer.setup.ensure_installed = {
   "sumneko_lua",
   "jsonls",
 }
-lvim.lsp.installer.setup.ui.check_outdated_servers_on_open = false
 
 -- Additional formatters
 local formatters = require "lvim.lsp.null-ls.formatters"

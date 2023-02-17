@@ -1,4 +1,5 @@
 #!/bin/sh
+brew install fish
 mkdir -p ~/.config/fish
 ln -sf "`pwd`/config.fish" ~/.config/fish/config.fish
 ln -sf "`pwd`/fishfile" ~/.config/fish/fishfile
