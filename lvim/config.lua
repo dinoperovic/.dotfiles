@@ -76,28 +76,16 @@ linters.setup {
 -- Additional Plugins
 lvim.plugins = {
   -- Trouble diagnostics
-  { "folke/trouble.nvim",     cmd = "TroubleToggle" },
+  { "folke/trouble.nvim",      cmd = "TroubleToggle" },
 
   -- GIT diffview
-  { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' },
+  { 'sindrets/diffview.nvim',  requires = 'nvim-lua/plenary.nvim' },
 
   -- Multi cursor
   { "mg979/vim-visual-multi" },
 
   -- GH copilot
-  { "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-        }
-      end, 100)
-    end,
-  },
-  { "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-  },
+  { "github/copilot.vim" },
 
   -- Themes
   { "catppuccin/nvim" },
@@ -114,7 +102,3 @@ lvim.builtin.which_key.mappings["t"] = {
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
-
--- GH copilot
-lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-table.insert(lvim.builtin.cmp.sources, 3, { name = "copilot" })
