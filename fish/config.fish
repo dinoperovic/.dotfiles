@@ -32,6 +32,7 @@ alias gb "git branch"
 alias gp "git push"
 alias gco "git checkout"
 alias gst "git status"
+alias gg "lazygit"
 
 # Docker & Kubernetes
 alias d "docker"

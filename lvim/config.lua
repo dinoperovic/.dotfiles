@@ -4,6 +4,10 @@ lvim.format_on_save.enabled = true
 lvim.colorscheme = "lunar"
 lvim.leader = "space"
 
+-- Project
+lvim.builtin.project.detection_methods = { "pattern" }
+lvim.builtin.project.patterns = { ".git" }
+
 -- Keybindings
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
@@ -46,6 +50,7 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- LSP settings
 lvim.lsp.installer.setup.ensure_installed = {
+  "pyright",
   "sumneko_lua",
   "jsonls",
 }
