@@ -54,6 +54,7 @@ set PATH ~/Dev/flutter/bin $PATH
 # Misc
 alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
+alias cat "bat"
 
 # Dev directories & aliases
 set -x DOTFILES $HOME/.dotfiles

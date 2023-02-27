@@ -1,6 +1,4 @@
 #!/bin/sh
-
+echo "--- installing..."
 brew install gpg
-mkdir -p ~/.gnupg
-chmod 700 ~/.gnupg
-ln -sf "`pwd`/gpg-agent.conf" ~/.gnupg/gpg-agent.conf
+sh ./link.sh

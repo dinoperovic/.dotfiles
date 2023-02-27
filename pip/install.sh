@@ -1,2 +1,3 @@
 #!/bin/sh
-ln -sf "`pwd`/.pypirc" ~/.pypirc
+echo "--- installing..."
+sh ./link.sh

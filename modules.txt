@@ -1,0 +1,10 @@
+git
+gpg
+fish
+lvim
+pip
+zsh
+starship
+alacritty
+tmux
+lazygit

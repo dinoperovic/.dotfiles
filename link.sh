@@ -6,9 +6,10 @@ for module in $MODULES
 do
   echo ""
   echo "=== $module start ==="
-  sh -c "cd $module && ./install.sh"
+  sh -c "cd $module && ./link.sh"
   echo "=== $module end ====="
 done
 
 echo ""
 echo "Done!"
+

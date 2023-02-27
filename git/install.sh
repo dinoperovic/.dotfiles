@@ -1,3 +1,4 @@
 #!/bin/sh
+echo "--- installing..."
 brew install git
-ln -sf "`pwd`/.gitconfig" ~/.gitconfig
+sh ./link.sh
