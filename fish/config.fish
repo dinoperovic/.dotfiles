@@ -14,6 +14,9 @@ alias wp "which python"
 alias dj "python manage.py"
 alias dja "django-admin"
 
+# Node
+set --universal nvm_default_version v18.14.2
+
 # Rust
 set PATH ~/.cargo/bin $PATH
 
@@ -47,9 +50,6 @@ alias rn "react-native"
 
 # Flutter
 set PATH ~/Dev/flutter/bin $PATH
-
-# Node
-set --universal nvm_default_version v16.15.0
 
 # Misc
 alias tree "tree -C"

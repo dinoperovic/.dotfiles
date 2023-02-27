@@ -62,7 +62,7 @@ formatters.setup {
   { command = "isort", filetypes = { "python" } },
   {
     command = "prettierd",
-    filetypes = { "typescript", "typescriptreact", "svelte" },
+    filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
   },
 }
 
