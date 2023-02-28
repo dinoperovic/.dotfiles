@@ -1,7 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "tokyonight-storm"
 lvim.leader = "space"
 
 -- Project
