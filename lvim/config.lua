@@ -1,7 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "tokyonight-storm"
+lvim.colorscheme = "tokyonight"
 lvim.leader = "space"
 
 -- Project
@@ -76,20 +76,32 @@ linters.setup {
 -- Additional Plugins
 lvim.plugins = {
   -- Trouble diagnostics
-  { "folke/trouble.nvim",      cmd = "TroubleToggle" },
+  { "folke/trouble.nvim",     cmd = "TroubleToggle" },
 
   -- GIT diffview
-  { 'sindrets/diffview.nvim',  requires = 'nvim-lua/plenary.nvim' },
+  { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' },
 
   -- Multi cursor
   { "mg979/vim-visual-multi" },
 
   -- GH copilot
-  { "github/copilot.vim" },
+  { "github/copilot.vim",
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+    end
+  },
+  { "hrsh7th/cmp-copilot",
+    config = function()
+      lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+      table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
+    end
+  },
 
   -- Themes
   { "catppuccin/nvim" },
   { "arcticicestudio/nord-vim" },
+  { "ellisonleao/gruvbox.nvim" },
 }
 
 -- Trouble
