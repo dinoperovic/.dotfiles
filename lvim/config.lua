@@ -6,7 +6,7 @@ lvim.leader = "space"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
-lvim.builtin.project.patterns = { ".git" }
+lvim.builtin.project.patterns = { ".git", "^node_modules" }
 
 -- Keybindings
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
@@ -85,13 +85,15 @@ lvim.plugins = {
   { "mg979/vim-visual-multi" },
 
   -- GH copilot
-  { "github/copilot.vim",
+  {
+    "github/copilot.vim",
     config = function()
       vim.g.copilot_no_tab_map = true
       vim.g.copilot_assume_mapped = true
     end
   },
-  { "hrsh7th/cmp-copilot",
+  {
+    "hrsh7th/cmp-copilot",
     config = function()
       lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
       table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
