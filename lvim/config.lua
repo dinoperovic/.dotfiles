@@ -86,18 +86,30 @@ lvim.plugins = {
 
   -- GH copilot
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-    end
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
   },
   {
-    "hrsh7th/cmp-copilot",
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua" },
     config = function()
-      lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-      table.insert(lvim.builtin.cmp.sources, { name = "copilot" })
+      require("copilot_cmp").setup()
     end
+  },
+
+  {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
   },
 
   -- Themes
@@ -115,4 +127,12 @@ lvim.builtin.which_key.mappings["t"] = {
   q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
   l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
+-- Spectre
+lvim.builtin.which_key.mappings["R"] = {
+  name = "Replace",
+  s = { "<cmd>lua require('spectre').open()<cr>", "search" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "file" },
 }
