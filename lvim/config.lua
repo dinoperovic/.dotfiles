@@ -1,7 +1,7 @@
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "tokyonight"
+lvim.colorscheme = "horizon"
 lvim.leader = "space"
 
 -- Project
@@ -62,7 +62,7 @@ formatters.setup {
   { command = "isort", filetypes = { "python" } },
   {
     command = "prettierd",
-    filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
+    filetypes = { "javascript", "typescript", "typescriptreact", "svelte", "css", "html", "markdown", "yaml" },
   },
 }
 
@@ -113,6 +113,7 @@ lvim.plugins = {
   },
 
   -- Themes
+  { "lunarvim/horizon.nvim" },
   { "catppuccin/nvim" },
   { "arcticicestudio/nord-vim" },
   { "ellisonleao/gruvbox.nvim" },
