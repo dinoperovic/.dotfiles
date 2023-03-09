@@ -1,3 +1,6 @@
+-- Vim options
+vim.opt.relativenumber = true
+
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
@@ -9,8 +12,6 @@ lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules" }
 
 -- Keybindings
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -30,28 +31,11 @@ lvim.builtin.telescope.defaults.mappings = {
 }
 
 -- Treesitter config
-lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
-}
-
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.auto_install = true
 
 -- LSP settings
 lvim.lsp.installer.setup.ensure_installed = {
   "pyright",
-  "sumneko_lua",
   "jsonls",
 }
 
@@ -76,10 +60,16 @@ linters.setup {
 -- Additional Plugins
 lvim.plugins = {
   -- Trouble diagnostics
-  { "folke/trouble.nvim",     cmd = "TroubleToggle" },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle"
+  },
 
   -- GIT diffview
-  { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' },
+  {
+    'sindrets/diffview.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  },
 
   -- Multi cursor
   { "mg979/vim-visual-multi" },
@@ -104,6 +94,7 @@ lvim.plugins = {
     end
   },
 
+  -- Spectre search and replace
   {
     "windwp/nvim-spectre",
     event = "BufRead",
@@ -121,7 +112,7 @@ lvim.plugins = {
 
 -- Trouble
 lvim.builtin.which_key.mappings["t"] = {
-  name = "Diagnostics",
+  name = "Trouble",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
   w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
   d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
