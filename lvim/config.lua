@@ -4,16 +4,20 @@ vim.opt.relativenumber = true
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "horizon"
+lvim.colorscheme = "catppuccin-mocha"
 lvim.leader = "space"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules" }
 
+-- Tree explorer
+lvim.builtin.nvimtree.setup.view.width = 40
+
 -- Keybindings
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
 
 -- Telescope navigation
 local _, actions = pcall(require, "telescope.actions")
@@ -76,22 +80,12 @@ lvim.plugins = {
 
   -- GH copilot
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
+    "github/copilot.vim",
     config = function()
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
+      vim.g.copilot_no_tab_map = true
+      vim.g.copilot_assume_mapped = true
+      vim.api.nvim_set_keymap("i", "<C-x>", 'copilot#Accept("")', { expr = true, silent = true })
     end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end
   },
 
   -- Spectre search and replace
@@ -100,6 +94,15 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("spectre").setup()
+    end,
+  },
+
+  -- Markdown
+  {
+    "iamcco/markdown-preview.nvim",
+    event = "BufRead",
+    build = function()
+      vim.fn["mkdp#util#install"]()
     end,
   },
 
