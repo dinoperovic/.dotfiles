@@ -4,7 +4,7 @@ vim.opt.relativenumber = true
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "catppuccin-mocha"
+lvim.colorscheme = "rose-pine"
 lvim.leader = "space"
 
 -- Project
@@ -111,6 +111,7 @@ lvim.plugins = {
   { "catppuccin/nvim" },
   { "arcticicestudio/nord-vim" },
   { "ellisonleao/gruvbox.nvim" },
+  { 'rose-pine/neovim',        as = 'rose-pine' },
 }
 
 -- Trouble
