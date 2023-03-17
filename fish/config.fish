@@ -26,6 +26,8 @@ alias pdja "poetry run django-admin"
 
 # Git
 alias g "git"
+alias ga "git add"
+alias gc "git commit"
 alias gd "git diff"
 alias gl "git pull"
 alias gm "git merge"
