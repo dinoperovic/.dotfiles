@@ -4,19 +4,19 @@ vim.opt.relativenumber = true
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "rose-pine"
+lvim.colorscheme = "rose-pine-moon"
 lvim.leader = "space"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
-lvim.builtin.project.patterns = { ".git", "^node_modules" }
+lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 
 -- Tree explorer
 lvim.builtin.nvimtree.setup.view.width = 40
 
 -- Keybindings
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-n>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-p>"] = ":BufferLineCyclePrev<CR>"
 
 
 -- Telescope navigation
