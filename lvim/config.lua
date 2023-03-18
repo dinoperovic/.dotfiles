@@ -15,8 +15,8 @@ lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 lvim.builtin.nvimtree.setup.view.width = 40
 
 -- Keybindings
-lvim.keys.normal_mode["<S-n>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-p>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
 
 -- Telescope navigation
@@ -63,30 +63,38 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
+
   -- Trouble diagnostics
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle"
   },
 
-  -- GIT diffview
+  -- Persistance (sessions)
   {
-    'sindrets/diffview.nvim',
-    requires = { 'nvim-lua/plenary.nvim' }
+    "folke/persistence.nvim",
+    event = "BufReadPre",
+    module = "persistence",
+    config = function()
+      require("persistence").setup {
+        dir = vim.fn.expand(vim.fn.stdpath "config" .. "/session/"),
+        options = { "buffers", "curdir", "tabpages", "winsize" },
+      }
+    end,
   },
 
   -- Multi cursor
   { "mg979/vim-visual-multi" },
 
   -- GH copilot
-  {
-    "github/copilot.vim",
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.api.nvim_set_keymap("i", "<C-x>", 'copilot#Accept("")', { expr = true, silent = true })
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.g.copilot_assume_mapped = true
+  --     vim.api.nvim_set_keymap("i", "<C-x>", 'copilot#Accept("")', { expr = true, silent = true })
+  --   end,
+  -- },
 
   -- Spectre search and replace
   {
@@ -112,6 +120,14 @@ lvim.plugins = {
   { "arcticicestudio/nord-vim" },
   { "ellisonleao/gruvbox.nvim" },
   { 'rose-pine/neovim',        as = 'rose-pine' },
+}
+
+-- Persistance
+lvim.builtin.which_key.mappings["S"] = {
+  name = "Session",
+  s = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
+  l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
+  Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
 
 -- Trouble
