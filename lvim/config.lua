@@ -46,19 +46,15 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- Additional formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { command = "black", filetypes = { "python" } },
-  { command = "isort", filetypes = { "python" } },
-  {
-    command = "prettierd",
-    filetypes = { "javascript", "typescript", "typescriptreact", "svelte", "css", "html", "markdown", "yaml" },
-  },
+  { command = "black" },
+  { command = "isort" },
+  { command = "prettierd" },
 }
 
 -- Additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "mypy",   filetypes = { "python" } },
-  { command = "flake8", filetypes = { "python" } },
+  -- { command = "mypy" },
 }
 
 -- Additional Plugins
