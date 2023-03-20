@@ -17,7 +17,8 @@ lvim.builtin.nvimtree.setup.view.width = 40
 -- Keybindings
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-
+lvim.keys.insert_mode["<C-e>"] = "<C-c>A"
+lvim.keys.insert_mode["<C-a>"] = "<C-c>I"
 
 -- Telescope navigation
 local _, actions = pcall(require, "telescope.actions")
@@ -59,7 +60,6 @@ linters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-
   -- Trouble diagnostics
   {
     "folke/trouble.nvim",
