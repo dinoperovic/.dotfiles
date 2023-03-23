@@ -15,10 +15,12 @@ lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 lvim.builtin.nvimtree.setup.view.width = 40
 
 -- Keybindings
+lvim.keys.insert_mode["<C-e>"] = "<C-o>A"
+lvim.keys.insert_mode["<C-a>"] = "<C-o>I"
+lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
+lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.insert_mode["<C-e>"] = "<C-c>A"
-lvim.keys.insert_mode["<C-a>"] = "<C-c>I"
 
 -- Telescope navigation
 local _, actions = pcall(require, "telescope.actions")
@@ -83,14 +85,14 @@ lvim.plugins = {
   { "mg979/vim-visual-multi" },
 
   -- GH copilot
-  -- {
-  --   "github/copilot.vim",
-  --   config = function()
-  --     vim.g.copilot_no_tab_map = true
-  --     vim.g.copilot_assume_mapped = true
-  --     vim.api.nvim_set_keymap("i", "<C-x>", 'copilot#Accept("")', { expr = true, silent = true })
-  --   end,
-  -- },
+  {
+    "github/copilot.vim",
+    -- config = function()
+    --   vim.g.copilot_no_tab_map = true
+    --   vim.g.copilot_assume_mapped = true
+    --   vim.api.nvim_set_keymap("i", "<C-x>", 'copilot#Accept("")', { expr = true, silent = true })
+    -- end,
+  },
 
   -- Spectre search and replace
   {
@@ -138,7 +140,7 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 
 -- Spectre
-lvim.builtin.which_key.mappings["R"] = {
+lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   s = { "<cmd>lua require('spectre').open()<cr>", "search" },
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "word" },
