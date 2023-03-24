@@ -18,7 +18,6 @@ lvim.builtin.nvimtree.setup.view.width = 40
 lvim.keys.insert_mode["<C-e>"] = "<C-o>A"
 lvim.keys.insert_mode["<C-a>"] = "<C-o>I"
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
-lvim.keys.normal_mode["<C-q>"] = ":q<CR>"
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
