@@ -1,20 +1,14 @@
 -- Vim options
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 vim.opt.relativenumber = true
 
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "rose-pine-moon"
+
+-- Keymaps
 lvim.leader = "space"
-
--- Project
-lvim.builtin.project.detection_methods = { "pattern" }
-lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
-
--- Tree explorer
-lvim.builtin.nvimtree.setup.view.width = 40
-
--- Keybindings
 lvim.keys.insert_mode["<C-e>"] = "<C-o>A"
 lvim.keys.insert_mode["<C-a>"] = "<C-o>I"
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
@@ -24,57 +18,74 @@ lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
--- Telescope navigation
-local _, actions = pcall(require, "telescope.actions")
-lvim.builtin.telescope.defaults.mappings = {
-  i = {
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-    ["<C-n>"] = actions.cycle_history_next,
-    ["<C-p>"] = actions.cycle_history_prev,
-  },
-  n = {
-    ["<C-j>"] = actions.move_selection_next,
-    ["<C-k>"] = actions.move_selection_previous,
-  },
-}
+-- Theme
+lvim.colorscheme = "rose-pine"
 
--- Treesitter config
+-- Project
+lvim.builtin.project.detection_methods = { "pattern" }
+lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
+
+-- Tree explorer
+lvim.builtin.nvimtree.setup.view.width = 40
+
+-- Treesitter 
 lvim.builtin.treesitter.auto_install = true
+lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.ensure_installed = {}
 
--- LSP settings
-lvim.lsp.installer.setup.ensure_installed = {
-  "pyright",
-  "jsonls",
-}
+-- LSP 
+lvim.lsp.installer.setup.automatic_installation = true
 
--- Additional formatters
+-- Linters and formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black" },
   { command = "isort" },
   { command = "prettierd" },
 }
-
--- Additional linters
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  -- { command = "mypy" },
-}
+linters.setup {}
 
--- Additional Plugins
+
+-- Plugins
 lvim.plugins = {
-  -- Trouble diagnostics
   {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle"
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("spectre").setup()
+    end,
   },
-
-  -- Persistance (sessions)
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "folke/lsp-colors.nvim",
+    event = "BufRead",
+  },
+  {
+  "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
   {
     "folke/persistence.nvim",
     event = "BufReadPre",
-    module = "persistence",
+    lazy = true,
     config = function()
       require("persistence").setup {
         dir = vim.fn.expand(vim.fn.stdpath "config" .. "/session/"),
@@ -82,11 +93,14 @@ lvim.plugins = {
       }
     end,
   },
-
-  -- Multi cursor
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
   { "mg979/vim-visual-multi" },
-
-  -- GH copilot
   {
     "github/copilot.vim",
     config = function()
@@ -96,43 +110,23 @@ lvim.plugins = {
     end,
   },
 
-  -- Spectre search and replace
-  {
-    "windwp/nvim-spectre",
-    event = "BufRead",
-    config = function()
-      require("spectre").setup()
-    end,
-  },
-
-  -- Markdown
-  {
-    "iamcco/markdown-preview.nvim",
-    event = "BufRead",
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-  },
-
   -- Themes
   { "lunarvim/horizon.nvim" },
   { "catppuccin/nvim" },
-  { "arcticicestudio/nord-vim" },
-  { "ellisonleao/gruvbox.nvim" },
-  { 'rose-pine/neovim',        as = 'rose-pine' },
+  { 'rose-pine/neovim'},
 }
 
--- Persistance
-lvim.builtin.which_key.mappings["S"] = {
-  name = "Session",
-  s = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
-  l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
-  q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
+-- windwp/nvim-spectre
+lvim.builtin.which_key.mappings["r"] = {
+  name = "Replace",
+  s = { "<cmd>lua require('spectre').open()<cr>", "search" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "file" },
 }
 
--- Trouble
+-- folke/trouble.nvim
 lvim.builtin.which_key.mappings["t"] = {
-  name = "Trouble",
+  name = "Diagnostics",
   t = { "<cmd>TroubleToggle<cr>", "trouble" },
   w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
   d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
@@ -141,10 +135,11 @@ lvim.builtin.which_key.mappings["t"] = {
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
 
--- Spectre
-lvim.builtin.which_key.mappings["r"] = {
-  name = "Replace",
-  s = { "<cmd>lua require('spectre').open()<cr>", "search" },
-  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "word" },
-  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "file" },
+-- folke/persistence.nvim
+lvim.builtin.which_key.mappings["S"] = {
+  name = "Session",
+  c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
+  l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
+  Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
+
