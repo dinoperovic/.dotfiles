@@ -35,6 +35,7 @@ lvim.builtin.treesitter.ensure_installed = {}
 
 -- LSP 
 lvim.lsp.installer.setup.automatic_installation = true
+lvim.lsp.installer.setup.ensure_installed = { "jsonls" }
 
 -- Linters and formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -140,7 +141,7 @@ lvim.builtin.which_key.mappings["t"] = {
 -- folke/persistence.nvim
 lvim.builtin.which_key.mappings["S"] = {
   name = "Session",
-  c = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
+  s = { "<cmd>lua require('persistence').load()<cr>", "Restore last session for current dir" },
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
   Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
