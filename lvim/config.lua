@@ -19,7 +19,7 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
 -- Theme
-lvim.colorscheme = "rose-pine"
+lvim.colorscheme = "rose-pine-moon"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
@@ -28,12 +28,12 @@ lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 -- Tree explorer
 lvim.builtin.nvimtree.setup.view.width = 40
 
--- Treesitter 
+-- Treesitter
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.ensure_installed = {}
 
--- LSP 
+-- LSP
 lvim.lsp.installer.setup.automatic_installation = true
 lvim.lsp.installer.setup.ensure_installed = { "jsonls" }
 
@@ -46,7 +46,7 @@ formatters.setup {
 }
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "eslint_d" }, 
+  { command = "eslint_d" },
 }
 
 
@@ -74,7 +74,7 @@ lvim.plugins = {
     event = "BufRead",
   },
   {
-  "folke/trouble.nvim",
+    "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
   {
@@ -105,18 +105,25 @@ lvim.plugins = {
   },
   { "mg979/vim-visual-multi" },
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot-cmp",
+    event = "InsertEnter",
+    dependencies = { "zbirenbaum/copilot.lua" },
     config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("")', { expr = true, silent = true })
+      vim.defer_fn(function()
+        require("copilot").setup({
+          suggestion = {
+            auto_trigger = true,
+          },
+        })
+        -- require("copilot_cmp").setup()
+      end, 100)
     end,
   },
 
   -- Themes
   { "lunarvim/horizon.nvim" },
   { "catppuccin/nvim" },
-  { 'rose-pine/neovim'},
+  { 'rose-pine/neovim' },
 }
 
 -- windwp/nvim-spectre
@@ -146,3 +153,31 @@ lvim.builtin.which_key.mappings["S"] = {
   Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
 
+-- github/copilot.vim
+-- vim.g.copilot_no_tab_map = true
+-- vim.g.copilot_assume_mapped = true
+-- vim.g.copilot_tab_fallback = ""
+-- local cmp = require "cmp"
+
+-- lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
+--   cmp.mapping.abort()
+--   local copilot_keys = vim.fn["copilot#Accept"]()
+--   if copilot_keys ~= "" then
+--     vim.api.nvim_feedkeys(copilot_keys, "i", true)
+--   else
+--     fallback()
+--   end
+-- end
+
+-- lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
+--   if cmp.visible() then
+--     cmp.select_next_item()
+--   else
+--     local copilot_keys = vim.fn["copilot#Accept"]()
+--     if copilot_keys ~= "" then
+--       vim.api.nvim_feedkeys(copilot_keys, "i", true)
+--     else
+--       fallback()
+--     end
+--   end
+-- end
