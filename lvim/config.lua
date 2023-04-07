@@ -11,10 +11,11 @@ lvim.format_on_save.enabled = true
 lvim.leader = "space"
 lvim.keys.insert_mode["<C-e>"] = "<C-o>A"
 lvim.keys.insert_mode["<C-a>"] = "<C-o>I"
+lvim.keys.normal_mode["<C-p>"] = ":Telescope find_files<CR>"
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
-lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
+lvim.keys.normal_mode["<C-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
@@ -152,32 +153,3 @@ lvim.builtin.which_key.mappings["S"] = {
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
   Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
-
--- github/copilot.vim
--- vim.g.copilot_no_tab_map = true
--- vim.g.copilot_assume_mapped = true
--- vim.g.copilot_tab_fallback = ""
--- local cmp = require "cmp"
-
--- lvim.builtin.cmp.mapping["<C-e>"] = function(fallback)
---   cmp.mapping.abort()
---   local copilot_keys = vim.fn["copilot#Accept"]()
---   if copilot_keys ~= "" then
---     vim.api.nvim_feedkeys(copilot_keys, "i", true)
---   else
---     fallback()
---   end
--- end
-
--- lvim.builtin.cmp.mapping["<Tab>"] = function(fallback)
---   if cmp.visible() then
---     cmp.select_next_item()
---   else
---     local copilot_keys = vim.fn["copilot#Accept"]()
---     if copilot_keys ~= "" then
---       vim.api.nvim_feedkeys(copilot_keys, "i", true)
---     else
---       fallback()
---     end
---   end
--- end
