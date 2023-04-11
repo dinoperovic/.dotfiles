@@ -2,10 +2,14 @@
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.relativenumber = true
+vim.opt.background = "dark"
 
 -- General
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = true
+
+-- Theme
+lvim.colorscheme = "everforest"
 
 -- Keymaps
 lvim.leader = "space"
@@ -15,12 +19,9 @@ lvim.keys.normal_mode["<C-p>"] = ":Telescope find_files<CR>"
 lvim.keys.normal_mode["<C-s>"] = ":w<CR>"
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
-lvim.keys.normal_mode["<C-x>"] = ":BufferKill<CR>"
+lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-
--- Theme
-lvim.colorscheme = "rose-pine-moon"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
@@ -113,7 +114,7 @@ lvim.plugins = {
       vim.defer_fn(function()
         require("copilot").setup({
           suggestion = {
-            auto_trigger = true,
+            auto_trigger = false,
           },
         })
         -- require("copilot_cmp").setup()
@@ -122,9 +123,12 @@ lvim.plugins = {
   },
 
   -- Themes
-  { "lunarvim/horizon.nvim" },
+  { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim" },
   { 'rose-pine/neovim' },
+  { 'morhetz/gruvbox' },
+  { 'rebelot/kanagawa.nvim' },
+  { 'sainnhe/everforest' },
 }
 
 -- windwp/nvim-spectre
