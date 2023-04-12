@@ -36,7 +36,7 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.ensure_installed = {}
 
 -- LSP
-lvim.lsp.installer.setup.automatic_installation = true
+lvim.lsp.installer.setup.automatic_server_installation = true
 lvim.lsp.installer.setup.ensure_installed = { "jsonls" }
 
 -- Linters and formatters
