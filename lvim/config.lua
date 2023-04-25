@@ -22,13 +22,14 @@ lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<M-a>"] = "ggVG"
 
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 
 -- Tree explorer
-lvim.builtin.nvimtree.setup.view.width = 40
+lvim.builtin.nvimtree.setup.view.width = 41
 
 -- Treesitter
 lvim.builtin.treesitter.auto_install = true
@@ -84,7 +85,7 @@ lvim.plugins = {
     build = "cd app && npm install",
     ft = "markdown",
     config = function()
-      vim.g.mkdp_auto_start = 1
+      vim.g.mkdp_auto_start = 2
     end,
   },
   {
@@ -105,7 +106,7 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
-  { "mg979/vim-visual-multi" },
+  { "mg980/vim-visual-multi" },
   {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",
@@ -114,21 +115,50 @@ lvim.plugins = {
       vim.defer_fn(function()
         require("copilot").setup({
           suggestion = {
+            enabled = false,
             auto_trigger = false,
           },
+          panel = { enabled = false },
         })
-        -- require("copilot_cmp").setup()
-      end, 100)
+        require("copilot_cmp").setup()
+      end, 101)
     end,
+  },
+  {
+    'simrat40/rust-tools.nvim',
+    config = function()
+      local rt = require('rust-tools')
+      rt.setup({
+        server = {
+          on_attach = function(_, bufnr)
+            -- Hover actions
+            vim.keymap.set("n", "<S-k>", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<Leader>la", rt.code_action_group.code_action_group, { buffer = bufnr })
+          end,
+        },
+      })
+    end
+  },
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("zen-mode").setup({
+        window = {
+          width = 1.8,
+        }
+      })
+    end
   },
 
   -- Themes
-  { "ellisonleao/gruvbox.nvim" },
   { "catppuccin/nvim" },
   { 'rose-pine/neovim' },
-  { 'morhetz/gruvbox' },
   { 'rebelot/kanagawa.nvim' },
   { 'sainnhe/everforest' },
+  { 'sainnhe/gruvbox-material' },
+  { 'sainnhe/edge' },
+  { 'sainnhe/sonokai' },
 }
 
 -- windwp/nvim-spectre
