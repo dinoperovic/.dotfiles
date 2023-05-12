@@ -29,7 +29,7 @@ lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 
 -- Tree explorer
-lvim.builtin.nvimtree.setup.view.width = 41
+lvim.builtin.nvimtree.setup.view.width = 40
 
 -- Treesitter
 lvim.builtin.treesitter.auto_install = true
@@ -49,9 +49,11 @@ formatters.setup {
 }
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "eslint_d" },
+  {
+    command = "eslint_d",
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" }
+  },
 }
-
 
 -- Plugins
 lvim.plugins = {
@@ -115,12 +117,12 @@ lvim.plugins = {
       vim.defer_fn(function()
         require("copilot").setup({
           suggestion = {
-            enabled = false,
+            enabled = true,
             auto_trigger = false,
           },
           panel = { enabled = false },
         })
-        require("copilot_cmp").setup()
+        -- require("copilot_cmp").setup()
       end, 101)
     end,
   },
@@ -150,6 +152,15 @@ lvim.plugins = {
       })
     end
   },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  },
+  { "derektata/lorem.nvim" },
 
   -- Themes
   { "catppuccin/nvim" },
