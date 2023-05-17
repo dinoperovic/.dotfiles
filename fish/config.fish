@@ -42,6 +42,7 @@ alias gg "lazygit"
 alias d "docker"
 alias dc "docker compose"
 alias k "kubectl"
+alias dd "lazydocker"
 
 # Terraform
 alias tf "terraform"

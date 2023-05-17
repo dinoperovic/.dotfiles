@@ -181,9 +181,9 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 
 -- folke/trouble.nvim
-lvim.builtin.which_key.mappings["t"] = {
+lvim.builtin.which_key.mappings["x"] = {
   name = "Diagnostics",
-  t = { "<cmd>TroubleToggle<cr>", "trouble" },
+  x = { "<cmd>TroubleToggle<cr>", "trouble" },
   w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
   d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
   q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
