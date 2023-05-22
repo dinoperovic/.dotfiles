@@ -24,6 +24,11 @@ lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["<M-a>"] = "ggVG"
 
+-- Which-key mappings
+lvim.builtin.which_key.mappings['s']['s'] = {
+  "<cmd>lua require('luasnip.loaders').edit_snippet_files()<cr>", "Edit snippets"
+}
+
 -- Project
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
