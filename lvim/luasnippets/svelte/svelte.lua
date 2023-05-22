@@ -3,12 +3,12 @@ return {
   s("script-ts", {
     t('<script lang="ts">'),
     i(0),
-    t('</script>'),
+    t('</script>')
   }),
 
   s("style-postcss", {
     t('<style lang="postcss">'),
     i(0),
-    t('</style>'),
-  })
+    t('</style>')
+  }),
 }
