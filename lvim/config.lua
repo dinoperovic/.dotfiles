@@ -45,11 +45,18 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.lsp.installer.setup.automatic_server_installation = true
 lvim.lsp.installer.setup.ensure_installed = { "jsonls" }
 
+-- Setup ruff-lsp
+require("lvim.lsp.manager").setup("ruff_lsp", {
+  on_attach = function(client, bufnr)
+    -- Disable hover in favor of Pyright
+    client.server_capabilities.hoverProvider = false
+  end
+})
+
 -- Linters and formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black" },
-  { command = "isort" },
   { command = "prettierd" },
 }
 local linters = require "lvim.lsp.null-ls.linters"
