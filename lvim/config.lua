@@ -120,7 +120,7 @@ lvim.plugins = {
       require("todo-comments").setup()
     end,
   },
-  { "mg980/vim-visual-multi" },
+  { "mg979/vim-visual-multi" },
   {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",
@@ -139,7 +139,7 @@ lvim.plugins = {
     end,
   },
   {
-    'simrat40/rust-tools.nvim',
+    'simrat39/rust-tools.nvim',
     config = function()
       local rt = require('rust-tools')
       rt.setup({
