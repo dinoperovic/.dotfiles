@@ -43,7 +43,7 @@ lvim.builtin.treesitter.ensure_installed = {}
 
 -- LSP
 lvim.lsp.installer.setup.automatic_server_installation = true
-lvim.lsp.installer.setup.ensure_installed = { "jsonls" }
+lvim.lsp.installer.setup.ensure_installed = { "jsonls", "ruff_lsp" }
 
 -- Setup ruff-lsp
 require("lvim.lsp.manager").setup("ruff_lsp", {
