@@ -2,6 +2,7 @@ git
 gpg
 fish
 lvim
+nvim
 pip
 zsh
 starship
