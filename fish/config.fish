@@ -3,9 +3,12 @@ set PATH /usr/local/sbin ~/.local/bin $PATH
 set -x EDITOR lvim
 set -x VISUAL lvim
 
-# Lunar vim
-alias vi "lvim"
-alias vim "lvim"
+# Ripgrep
+alias rgf "rg --files --hidden | rg"
+
+# Vim
+alias vi "nvim"
+alias vim "nvim"
 
 # Python & Django
 alias py "python"

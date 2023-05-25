@@ -30,10 +30,12 @@ lvim.builtin.which_key.mappings['s']['s'] = {
 }
 
 -- Project
+lvim.builtin.project.enabled = true
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.project.patterns = { ".git", "^node_modules", "^.venv" }
 
 -- Tree explorer
+lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.setup.view.width = 40
 
 -- Treesitter
@@ -127,13 +129,13 @@ lvim.plugins = {
     dependencies = { "zbirenbaum/copilot.lua" },
     config = function()
       vim.defer_fn(function()
-        require("copilot").setup({
-          suggestion = {
-            enabled = true,
-            auto_trigger = false,
-          },
-          panel = { enabled = false },
-        })
+        -- require("copilot").setup({
+        --   suggestion = {
+        --     enabled = true,
+        --     auto_trigger = false,
+        --   },
+        --   panel = { enabled = false },
+        -- })
         -- require("copilot_cmp").setup()
       end, 101)
     end,
@@ -155,21 +157,17 @@ lvim.plugins = {
     end
   },
   {
-    "folke/zen-mode.nvim",
-    config = function()
-      require("zen-mode").setup({
-        window = {
-          width = 1.8,
-        }
-      })
-    end
-  },
-  {
     "kylechui/nvim-surround",
     version = "*",
     event = "VeryLazy",
     config = function()
       require("nvim-surround").setup()
+    end
+  },
+  {
+    'stevearc/oil.nvim',
+    config = function()
+      require("oil").setup()
     end
   },
   { "derektata/lorem.nvim" },
@@ -210,3 +208,6 @@ lvim.builtin.which_key.mappings["S"] = {
   l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
   Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
 }
+
+-- stevearc/oil.nvim
+lvim.keys.normal_mode["-"] = require("oil").open
