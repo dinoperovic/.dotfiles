@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local Util = require("lazyvim.util")
 local map = vim.keymap.set
 
 -- Buffers
@@ -10,3 +11,6 @@ map("n", "X", function()
 end, { desc = "Delete Buffer" })
 map("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", { desc = "Delete buffers to the right" })
 map("n", "<leader>bj", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
+
+-- Find files using Ctrl-p
+map("n", "<C-p>", Util.telescope("files"), { desc = "Find Files (root dir)" })
