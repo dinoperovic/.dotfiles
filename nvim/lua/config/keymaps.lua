@@ -9,8 +9,9 @@ local map = vim.keymap.set
 map("n", "X", function()
 	require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
+
 map("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", { desc = "Delete buffers to the right" })
-map("n", "<leader>bj", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
+map("n", "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
 
 -- Find files using Ctrl-p
 map("n", "<C-p>", Util.telescope("files"), { desc = "Find Files (root dir)" })

@@ -1,5 +1,4 @@
 return {
-	-- project.nvim
 	{
 		"ahmedkhalf/project.nvim",
 		opts = {
@@ -7,8 +6,4 @@ return {
 			patterns = { ".git", "^node_modules", "^.venv" },
 		},
 	},
-
-	-- Disable plugins
-	{ "rcarriga/nvim-notify", enabled = false },
-	{ "folke/noice.nvim", enabled = false },
 }
