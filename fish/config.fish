@@ -1,20 +1,20 @@
 # Generic
 set PATH /usr/local/sbin ~/.local/bin $PATH
-set -x EDITOR lvim
-set -x VISUAL lvim
+set -x EDITOR nvim
+set -x VISUAL nvim
 
 # Ripgrep
 alias rgf "rg --files --hidden | rg"
 
 # Vim
-alias vi "nvim"
-alias vim "nvim"
+alias vi nvim
+alias vim nvim
 
 # Python & Django
-alias py "python"
+alias py python
 alias wp "which python"
 alias dj "python manage.py"
-alias dja "django-admin"
+alias dja django-admin
 
 # Node
 set --universal nvm_default_version v18.14.2
@@ -23,12 +23,12 @@ set --universal nvm_default_version v18.14.2
 set PATH ~/.cargo/bin $PATH
 
 # Poetry
-alias p "poetry"
+alias p poetry
 alias pdj "poetry run python manage.py"
 alias pdja "poetry run django-admin"
 
 # Git
-alias g "git"
+alias g git
 alias ga "git add"
 alias gc "git commit"
 alias gd "git diff"
@@ -39,19 +39,19 @@ alias gb "git branch"
 alias gp "git push"
 alias gco "git checkout"
 alias gst "git status"
-alias gg "lazygit"
+alias gg lazygit
 
 # Docker & Kubernetes
-alias d "docker"
+alias d docker
 alias dc "docker compose"
-alias k "kubectl"
-alias dd "lazydocker"
+alias k kubectl
+alias dd lazydocker
 
 # Terraform
-alias tf "terraform"
+alias tf terraform
 
 # React Native
-alias rn "react-native"
+alias rn react-native
 
 # Flutter
 set PATH ~/Dev/flutter/bin $PATH
@@ -59,7 +59,7 @@ set PATH ~/Dev/flutter/bin $PATH
 # Misc
 alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
-alias cat "bat"
+alias cat bat
 
 # Dev directories & aliases
 set -x DOTFILES $HOME/.dotfiles
@@ -96,4 +96,3 @@ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish
 
 # Starship prompt
 starship init fish | source
-
