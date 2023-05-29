@@ -22,3 +22,13 @@ map("n", "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers 
 
 -- Find files using Ctrl-p
 map("n", "<C-p>", Util.telescope("files"), { desc = "Find Files (root dir)" })
+
+-- Show line diagnostic in a floating window
+map("n", "gl", function()
+	local float = vim.diagnostic.config().float
+	if float then
+		local config = type(float) == "table" and float or {}
+		config.scope = "line"
+		vim.diagnostic.open_float(config)
+	end
+end, { desc = "Show line diagnostics" })
