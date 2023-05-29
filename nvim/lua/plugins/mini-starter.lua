@@ -1,6 +1,15 @@
 return {
 	{
 		"echasnovski/mini.starter",
+		keys = {
+			{
+				"<leader>ws",
+				function()
+					require("mini.starter").open()
+				end,
+				desc = "Show starter window",
+			},
+		},
 		opts = function(_, opts)
 			local pad = string.rep(" ", 0)
 			local new_section = function(name, action, section)
