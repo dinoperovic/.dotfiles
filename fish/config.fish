@@ -1,7 +1,10 @@
-# Generic
+# Base
 set PATH /usr/local/sbin ~/.local/bin $PATH
 set -x EDITOR nvim
 set -x VISUAL nvim
+
+# Generic
+alias c clear
 
 # Ripgrep
 alias rgf "rg --files --hidden | rg"

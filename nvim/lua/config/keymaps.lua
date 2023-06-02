@@ -21,7 +21,8 @@ map("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", { desc = "Delete buffers
 map("n", "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
 
 -- Find files using Ctrl-p
-map("n", "<C-p>", Util.telescope("files"), { desc = "Find Files (root dir)" })
+map("n", "<C-p>", Util.telescope("files", { cwd = false }), { desc = "Find Files (cwd)" })
+map("n", "<leader>F", Util.telescope("files", { cwd = false }), { desc = "Find Files (cwd)" })
 
 -- Show line diagnostic in a floating window
 map("n", "gl", function()
