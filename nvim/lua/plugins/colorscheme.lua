@@ -1,5 +1,7 @@
 return {
-	{ "catppuccin/nvim" },
+	{ "catppuccin/nvim", name = "catppuccin", opts = {
+		flavour = "macchiato",
+	} },
 	{ "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "sainnhe/everforest" },
