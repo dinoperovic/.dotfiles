@@ -25,6 +25,10 @@ set --universal nvm_default_version v18.14.2
 # Rust
 set PATH ~/.cargo/bin $PATH
 
+# Go
+set -x GOPATH ~/dev/.go
+set PATH $GOPATH/bin $PATH
+
 # Poetry
 alias p poetry
 alias pdj "poetry run python manage.py"
