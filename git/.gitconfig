@@ -6,7 +6,7 @@
 [push]
     default = simple
 [core]
-    editor = lvim
+    editor = vim
 [pull]
     rebase = true
 [commit]
