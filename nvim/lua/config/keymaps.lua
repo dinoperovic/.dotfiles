@@ -12,9 +12,6 @@ map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up centered" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down centered" })
 map("n", "<M-a>", "ggVG", { desc = "Select all" })
 
--- Paste without yanking
-map("v", "p", "P", { desc = "Paste without yanking" })
-
 -- Buffers
 map("n", "X", function()
 	require("mini.bufremove").delete(0, false)
