@@ -14,7 +14,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.ui.mini-starter" },
 		{ import = "lazyvim.plugins.extras.util.project" },
 		{ import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-		{ import = "lazyvim.plugins.extras.editor.flash" },
+		-- { import = "lazyvim.plugins.extras.editor.flash" },
 		{ import = "lazyvim.plugins.extras.editor.mini-files" },
 		{ import = "lazyvim.plugins.extras.coding.yanky" },
 		-- { import = "lazyvim.plugins.extras.coding.copilot" },
