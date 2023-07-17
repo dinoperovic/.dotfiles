@@ -1,14 +1,9 @@
 return {
 	{
 		"echasnovski/mini.starter",
+    -- stylua: ignore
 		keys = {
-			{
-				"<leader>ws",
-				function()
-					require("mini.starter").open()
-				end,
-				desc = "Show starter window",
-			},
+			{ "<leader>ws", function() require("mini.starter").open() end, desc = "Show starter window" },
 		},
 		opts = function(_, opts)
 			local pad = string.rep(" ", 0)
@@ -27,7 +22,7 @@ return {
 				new_section("New file", "ene | startinsert", "Built-in"),
 				new_section("Quit", "qa", "Built-in"),
 				new_section("Session restore", [[lua require("persistence").load()]], "Session"),
-				new_section("Parent directory", [[lua require("oil").open()]], "Navigation"),
+				new_section("- Explore directory", [[lua require("oil").open()]], "Navigation"),
 			}
 			opts.content_hooks = {
 				starter.gen_hook.adding_bullet(pad .. "░ ", false),
