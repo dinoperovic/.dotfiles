@@ -3,3 +3,8 @@
 -- Add any additional options here
 
 vim.opt.clipboard = "unnamedplus"
+
+-- Folding via treesitter
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
