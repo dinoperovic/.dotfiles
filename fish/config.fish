@@ -20,7 +20,7 @@ alias dj "python manage.py"
 alias dja django-admin
 
 # Node
-set --universal nvm_default_version v18.14.2
+set --universal nvm_default_version v18.17.0
 
 # Rust
 set PATH ~/.cargo/bin $PATH

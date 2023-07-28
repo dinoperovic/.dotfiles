@@ -8,3 +8,5 @@ starship
 alacritty
 tmux
 lazygit
+kitty
+gcp

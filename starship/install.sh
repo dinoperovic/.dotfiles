@@ -1,4 +1,4 @@
 #!/bin/sh
 echo "--- installing..."
-curl -sS https://starship.rs/install.sh | sh
+brew install starship
 sh ./link.sh
