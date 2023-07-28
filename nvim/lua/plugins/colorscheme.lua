@@ -8,11 +8,18 @@ return {
 	{ "sainnhe/gruvbox-material" },
 	{ "sainnhe/edge" },
 	{ "sainnhe/sonokai" },
-
 	{
 		"LazyVim/LazyVim",
 		opts = {
 			colorscheme = "catppuccin",
 		},
+	},
+	{
+		"AlexvZyl/nordic.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nordic").load()
+		end,
 	},
 }
