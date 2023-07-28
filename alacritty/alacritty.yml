@@ -275,7 +275,6 @@ schemes:
       magenta: "#F5C2E7"
       cyan: "#94E2D5"
       white: "#BAC2DE"
-
     bright:
       black: "#585B70"
       red: "#F38BA8"
@@ -285,7 +284,6 @@ schemes:
       magenta: "#F5C2E7"
       cyan: "#94E2D5"
       white: "#A6ADC8"
-
     dim:
       black: "#45475A"
       red: "#F38BA8"
