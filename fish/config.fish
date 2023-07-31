@@ -68,26 +68,6 @@ alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
 alias cat bat
 
-# Dev directories & aliases
-set -x DOTFILES $HOME/.dotfiles
-set -x DEV $HOME/Dev
-set -x PROJECTS $DEV/projects
-set -x ASSETS $DEV/assets
-set -x BACKUP $DEV/backup
-set -x PUBLIC $DEV/public
-set -x APPS $DEV/apps
-set -x PLAYGROUND $DEV/playground
-set -x XCODE $DEV/xcode
-alias cddot "cd $DOTFILES"
-alias cdd "cd $DEV"
-alias cdp "cd $PROJECTS"
-alias cdap "cd $APPS"
-alias cdpu "cd $PUBLIC"
-alias cda "cd $ASSETS"
-alias cdb "cd $BACKUP"
-alias cdpl "cd $PLAYGROUND"
-alias cdx "cd $XCODE"
-
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
