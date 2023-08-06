@@ -86,3 +86,6 @@ set -Ux fish_tmux_default_session_name dino
 
 # Starship prompt
 starship init fish | source
+
+# Enable VI (hybrid) key bindings
+set fish_key_bindings fish_hybrid_key_bindings
