@@ -1,8 +1,3 @@
-# Base
-set PATH /usr/local/sbin ~/.local/bin $PATH
-set -x EDITOR nvim
-set -x VISUAL nvim
-
 # Generic
 alias c clear
 
@@ -18,16 +13,6 @@ alias py python
 alias wp "which python"
 alias dj "python manage.py"
 alias dja django-admin
-
-# Node
-set --universal nvm_default_version v18.17.0
-
-# Rust
-set PATH ~/.cargo/bin $PATH
-
-# Go
-set -x GOPATH ~/dev/.go
-set PATH $GOPATH/bin $PATH
 
 # Poetry
 alias p poetry
@@ -60,17 +45,33 @@ alias tf terraform
 # React Native
 alias rn react-native
 
-# Flutter
-set PATH ~/Dev/flutter/bin $PATH
-
 # Misc
 alias tree "tree -C"
 alias hosts "sudo vi /etc/hosts"
 alias cat bat
 
+# Base
+set PATH /usr/local/sbin ~/.local/bin $PATH
+set -x EDITOR nvim
+set -x VISUAL nvim
+
 # Set language
 set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
+
+# Node
+set --universal nvm_default_version v18.17.0
+
+# Rust
+set PATH ~/.cargo/bin $PATH
+
+# Go
+set -x GOPATH ~/dev/.go
+set PATH $GOPATH/bin $PATH
+
+# Flutter
+set PATH ~/Dev/flutter/bin $PATH
+
 
 # Openssl
 set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib'
@@ -84,8 +85,8 @@ source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish
 # tmux
 set -Ux fish_tmux_default_session_name dino
 
-# Starship prompt
-starship init fish | source
-
 # Enable VI (hybrid) key bindings
 set fish_key_bindings fish_hybrid_key_bindings
+
+# Starship prompt
+starship init fish | source
