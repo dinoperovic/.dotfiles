@@ -1,7 +1,5 @@
 return {
-	{ "catppuccin/nvim", name = "catppuccin", opts = {
-		flavour = "macchiato",
-	} },
+	{ "catppuccin/nvim" },
 	{ "rose-pine/neovim" },
 	{ "rebelot/kanagawa.nvim" },
 	{ "sainnhe/everforest" },
@@ -9,7 +7,7 @@ return {
 	{ "sainnhe/edge" },
 	{ "sainnhe/sonokai" },
 	{ "EdenEast/nightfox.nvim" },
-	{ "AlexvZyl/nordic.nvim" },
+	{ "AlexvZyl/nordic.nvim", lazy = false, priority = 1000 },
 	{
 		"LazyVim/LazyVim",
 		opts = {
