@@ -8,18 +8,12 @@ return {
 	{ "sainnhe/gruvbox-material" },
 	{ "sainnhe/edge" },
 	{ "sainnhe/sonokai" },
+	{ "EdenEast/nightfox.nvim" },
+	{ "AlexvZyl/nordic.nvim" },
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin",
+			colorscheme = "nordic",
 		},
-	},
-	{
-		"AlexvZyl/nordic.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("nordic").load()
-		end,
 	},
 }
