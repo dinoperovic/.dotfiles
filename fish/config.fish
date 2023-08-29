@@ -1,5 +1,17 @@
+# Base
+set PATH /usr/local/sbin ~/.local/bin $PATH
+set -x EDITOR nvim
+set -x VISUAL nvim
+
+# Directories
+alias cd. "cd ~/.dotfiles"
+alias cdp "cd ~/Dev/Projects"
+alias cdpl "cd ~/Dev/Playground"
+
 # Generic
 alias c clear
+alias tree "tree -C"
+alias cat bat
 
 # Ripgrep
 alias rgf "rg --files --hidden | rg"
@@ -18,6 +30,16 @@ alias dja django-admin
 alias p poetry
 alias pdj "poetry run python manage.py"
 alias pdja "poetry run django-admin"
+
+# Node
+set --universal nvm_default_version v18.17.0
+
+# Rust
+set PATH ~/.cargo/bin $PATH
+
+# Go
+set -x GOPATH ~/.go
+set PATH $GOPATH/bin $PATH
 
 # Git
 alias g git
@@ -45,20 +67,6 @@ alias tf terraform
 # React Native
 alias rn react-native
 
-# Misc
-alias tree "tree -C"
-alias hosts "sudo vi /etc/hosts"
-alias cat bat
-
-# Base
-set PATH /usr/local/sbin ~/.local/bin $PATH
-set -x EDITOR nvim
-set -x VISUAL nvim
-
-# Set language
-set -x LC_ALL en_US.UTF-8
-set -x LANG en_US.UTF-8
-
 # Node
 set --universal nvm_default_version v18.17.0
 
@@ -69,9 +77,9 @@ set PATH ~/.cargo/bin $PATH
 set -x GOPATH ~/dev/.go
 set PATH $GOPATH/bin $PATH
 
-# Flutter
-set PATH ~/Dev/flutter/bin $PATH
-
+# Set language
+set -x LC_ALL en_US.UTF-8
+set -x LANG en_US.UTF-8
 
 # Openssl
 set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib'
