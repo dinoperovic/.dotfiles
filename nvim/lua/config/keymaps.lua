@@ -20,10 +20,6 @@ end, { desc = "Delete Buffer" })
 map("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", { desc = "Delete buffers to the right" })
 map("n", "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
 
--- Find files using Ctrl-p
-map("n", "<C-p>", Util.telescope("files", { cwd = false }), { desc = "Find Files (cwd)" })
-map("n", "<leader>F", Util.telescope("files", { cwd = false }), { desc = "Find Files (cwd)" })
-
 -- Show line diagnostic in a floating window
 map("n", "gl", function()
 	local float = vim.diagnostic.config().float
