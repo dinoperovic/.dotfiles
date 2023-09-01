@@ -67,9 +67,6 @@ alias tf terraform
 # React Native
 alias rn react-native
 
-# Node
-set --universal nvm_default_version v18.17.0
-
 # Rust
 set PATH ~/.cargo/bin $PATH
 
