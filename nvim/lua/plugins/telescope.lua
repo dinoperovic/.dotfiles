@@ -10,5 +10,14 @@ return {
 			{ "<leader>F", Util.telescope("files", { cwd = false, hidden = false }), desc = "Find Files (cwd)" },
 			{ "<C-p>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
 		},
+		opts = {
+			defaults = {
+				mappings = {
+					i = {
+						["<C-x>"] = require("telescope.actions").delete_buffer,
+					},
+				},
+			},
+		},
 	},
 }
