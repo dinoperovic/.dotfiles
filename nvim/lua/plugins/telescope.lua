@@ -12,6 +12,7 @@ return {
 		},
 		opts = {
 			defaults = {
+				preview = false,
 				path_display = { "truncate" },
 				mappings = {
 					i = {
