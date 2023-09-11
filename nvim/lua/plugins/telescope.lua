@@ -8,11 +8,14 @@ return {
 			{ "<leader>ff", Util.telescope("files", { hidden = true }), desc = "Find Files (root dir)" },
 			{ "<leader>fF", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
 			{ "<leader>F", Util.telescope("files", { cwd = false, hidden = false }), desc = "Find Files (cwd)" },
-			{ "<C-p>", Util.telescope("files", { cwd = false, hidden = true }), desc = "Find Files (cwd)" },
+			{
+				"<C-p>",
+				Util.telescope("files", { cwd = false, hidden = true, previewer = false }),
+				desc = "Find Files (cwd)",
+			},
 		},
 		opts = {
 			defaults = {
-				preview = false,
 				path_display = { "truncate" },
 				mappings = {
 					i = {

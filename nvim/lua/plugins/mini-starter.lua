@@ -14,7 +14,7 @@ return {
 
 			opts.header = nil
 			opts.items = {
-				new_section("Find file", "Telescope find_files hidden=true", "Telescope"),
+				new_section("Find file", "Telescope find_files hidden=true previewer=false", "Telescope"),
 				new_section("Recent files", "Telescope oldfiles", "Telescope"),
 				new_section("Grep text", "Telescope live_grep", "Telescope"),
 				new_section("init.lua", "e $MYVIMRC", "Config"),
