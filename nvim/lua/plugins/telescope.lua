@@ -12,6 +12,7 @@ return {
 		},
 		opts = {
 			defaults = {
+				path_display = { "truncate" },
 				mappings = {
 					i = {
 						["<C-x>"] = require("telescope.actions").delete_buffer,
