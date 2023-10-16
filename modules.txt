@@ -10,3 +10,4 @@ tmux
 lazygit
 kitty
 gcp
+zed
