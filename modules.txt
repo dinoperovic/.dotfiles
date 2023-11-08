@@ -5,7 +5,6 @@ nvim
 pip
 zsh
 starship
-alacritty
 tmux
 lazygit
 kitty
