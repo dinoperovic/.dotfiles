@@ -7,7 +7,7 @@ return {
 				show_hidden = true,
 			},
 		},
-    -- stylua: ignore
+		-- stylua: ignore
 		keys = {
 			{ "-", function() require("oil").open() end, desc = "Open parent directory" },
 		},

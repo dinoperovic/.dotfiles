@@ -1,9 +1,9 @@
 return {
 	{
 		"echasnovski/mini.starter",
-    -- stylua: ignore
-		keys = {
-			{ "<leader>ws", function() require("mini.starter").open() end, desc = "Show starter window" },
+		-- stylua: ignore
+		keys = { 
+			{ "<leader>ws", function() require("mini.starter").open() end, desc = "Show starter window" }, 
 		},
 		opts = function(_, opts)
 			local pad = string.rep(" ", 0)

@@ -18,9 +18,6 @@ map("n", "X", function()
 	require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
 
-map("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", { desc = "Delete buffers to the right" })
-map("n", "<leader>bh", "<cmd>BufferLineCloseLeft<CR>", { desc = "Delete buffers to the left" })
-
 -- Show line diagnostic in a floating window
 map("n", "gl", function()
 	local float = vim.diagnostic.config().float

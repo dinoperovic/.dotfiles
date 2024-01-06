@@ -3,7 +3,7 @@ local Util = require("lazyvim.util")
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-    -- stylua: ignore
+		-- stylua: ignore
 		keys = {
 			{ "<leader><space>", Util.telescope("files", { hidden = true, previewer = false }), desc = "Find Files (root dir)" },
 			{ "<leader>ff", Util.telescope("files", { hidden = true }), desc = "Find Files (root dir)" },
