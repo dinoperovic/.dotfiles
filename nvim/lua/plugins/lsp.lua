@@ -23,11 +23,11 @@ return {
       }
     },
     config = function(_, opts)
-      require('mason').setup()
-      require('mason-lspconfig').setup()
-
       -- Setup neovim lua configuration
       require('neodev').setup()
+
+      require('mason').setup()
+      require('mason-lspconfig').setup()
 
       -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
       local capabilities = vim.lsp.protocol.make_client_capabilities()
