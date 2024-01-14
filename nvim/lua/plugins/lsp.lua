@@ -4,8 +4,8 @@ return {
     dependencies = {
       'williamboman/mason.nvim',
       'williamboman/mason-lspconfig.nvim',
-      'j-hui/fidget.nvim',
-      'folke/neodev.nvim',
+      { 'j-hui/fidget.nvim',       opts = {} },
+      { 'folke/neodev.nvim',       opts = {} },
     },
     opts = {
       servers = {
@@ -23,15 +23,7 @@ return {
       }
     },
     config = function(_, opts)
-      -- Setup neovim lua configuration
-      require('neodev').setup()
-
-      require('mason').setup()
-      require('mason-lspconfig').setup()
-
-      -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+      require("mason").setup()
 
       --  This function gets run when an LSP connects to a particular buffer.
       local on_attach = function(_, bufnr)
@@ -76,6 +68,11 @@ return {
         ensure_installed = vim.tbl_keys(opts.servers),
       })
 
+      -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+
       mason_lspconfig.setup_handlers {
         function(server_name)
           require('lspconfig')[server_name].setup {
@@ -88,14 +85,4 @@ return {
       }
     end
   },
-  {
-    'williamboman/mason.nvim',
-    build = ":MasonUpdate",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "shfmt",
-      }
-    }
-  }
 }
