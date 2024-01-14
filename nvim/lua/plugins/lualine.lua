@@ -1,10 +1,11 @@
 return {
-	{
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "arkav/lualine-lsp-progress" },
-		opts = function(_, opts)
-			table.remove(opts.sections.lualine_c)
-			table.insert(opts.sections.lualine_c, "lsp_progress")
-		end,
-	},
+  'nvim-lualine/lualine.nvim',
+  opts = {
+    options = {
+      icons_enabled = false,
+      theme = 'onedark',
+      component_separators = '|',
+      section_separators = '',
+    },
+  },
 }
