@@ -33,6 +33,19 @@ return {
 		},
 	},
 	{
+		"nvim-pack/nvim-spectre",
+		cmd = "Spectre",
+		opts = {
+			open_cmd = "noswapfile vnew",
+			live_update = true,
+		},
+		-- stylua: ignore
+		keys = {
+			{ "<leader>rr", function() require("spectre").toggle() end, desc = "Replace Search" },
+			{ "<leader>rw", function() require("spectre").open_visual({select_word = true}) end, desc = "Replace Word" },
+		},
+	},
+	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		init = function()
@@ -51,10 +64,10 @@ return {
 				["["] = { name = "+prev" },
 				["<leader>b"] = { name = "buffer" },
 				["<leader>c"] = { name = "code" },
-				["<leader>f"] = { name = "file/find" },
+				["<leader>f"] = { name = "find" },
 				["<leader>g"] = { name = "git" },
-				["<leader>gh"] = { name = "hunks" },
 				["<leader>q"] = { name = "quit/session" },
+				["<leader>r"] = { name = "replace" },
 				["<leader>s"] = { name = "search" },
 				["<leader>u"] = { name = "ui" },
 				["<leader>w"] = { name = "windows" },
