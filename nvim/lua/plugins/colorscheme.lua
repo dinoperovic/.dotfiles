@@ -1,18 +1,18 @@
 return {
-	-- {
-	--   'navarasu/onedark.nvim',
-	--   lazy = fals,
-	--   priority = 1000,
-	--   config = function()
-	--     vim.cmd.colorscheme 'onedark'
-	--   end,
-	-- },
 	{
-		"sainnhe/gruvbox-material",
+		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("gruvbox-material")
+			vim.cmd.colorscheme("onedark")
 		end,
 	},
+	-- {
+	-- 	"sainnhe/gruvbox-material",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		vim.cmd.colorscheme("gruvbox-material")
+	-- 	end,
+	-- },
 }

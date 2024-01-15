@@ -82,5 +82,7 @@ return {
 	},
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
+
+		vim.keymap.set("n", "<leader>st", require("telescope.builtin").treesitter, { desc = "Search Treesitter" })
 	end,
 }

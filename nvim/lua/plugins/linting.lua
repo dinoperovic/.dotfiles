@@ -2,11 +2,18 @@ return {
 	{
 		"mfussenegger/nvim-lint",
 		event = { "BufReadPre", "BufNewFile" },
-		dependencies = {
-			"williamboman/mason.nvim",
-		},
 		opts = {
-			linters_by_ft = {},
+			linters_by_ft = {
+				-- frontend
+				javascript = { "eslint_d" },
+				javascriptreact = { "eslint_d" },
+				typescript = { "eslint_d" },
+				typescriptreact = { "eslint_d" },
+			},
+		},
+		-- stylua: ignore
+		keys = {
+			{ "<leader>cl", function() require("lint").try_lint() end, desc = "Lint current File" },
 		},
 		config = function(_, opts)
 			local lint = require("lint")
@@ -23,7 +30,7 @@ return {
 	{
 		"rshkarin/mason-nvim-lint",
 		dependencies = {
-			"mfussenegger/nvim-lint",
+			"williamboman/mason.nvim",
 		},
 	},
 }

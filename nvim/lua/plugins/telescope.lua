@@ -16,8 +16,7 @@ return {
 			defaults = {
 				mappings = {
 					i = {
-						["<C-u>"] = false,
-						["<C-d>"] = false,
+						["<C-x>"] = require("telescope.actions").delete_buffer,
 					},
 				},
 			},

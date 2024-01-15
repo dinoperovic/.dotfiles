@@ -11,7 +11,6 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		opts = {},
-		lazy = false,
 	},
 	{
 		"christoomey/vim-tmux-navigator",
