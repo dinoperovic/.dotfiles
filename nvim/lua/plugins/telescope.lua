@@ -25,12 +25,12 @@ return {
 		-- Enable telescope fzf native, if installed
 		pcall(require("telescope").load_extension, "fzf")
 
+		vim.keymap.set("n", "<leader><space>", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Switch Buffer" })
 		vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find Files" })
 		vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, { desc = "Find Files" })
 		vim.keymap.set("n", "<leader>fr", require("telescope.builtin").oldfiles, { desc = "Find recent Files" })
 		vim.keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "Find recent Files" })
 		vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Find Buffers" })
-		vim.keymap.set("n", "<leader><space>", require("telescope.builtin").buffers, { desc = "Find Buffers" })
 		vim.keymap.set("n", "<leader>fg", require("telescope.builtin").git_files, { desc = "Find Git Files" })
 
 		vim.keymap.set("n", "<leader>ss", require("telescope.builtin").builtin, { desc = "Search Select Telescope" })
@@ -41,5 +41,8 @@ return {
 		vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, { desc = "Search Diagnostics" })
 
 		vim.keymap.set("n", "<leader>=", require("telescope.builtin").resume, { desc = "Picker Resume" })
+
+		vim.keymap.set("n", "<leader>gs", require("telescope.builtin").git_status, { desc = "Git Status" })
+		vim.keymap.set("n", "<leader>gc", require("telescope.builtin").git_commits, { desc = "Git Commits" })
 	end,
 }
