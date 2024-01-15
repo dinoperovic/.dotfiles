@@ -2,16 +2,26 @@ return {
 	{
 		"williamboman/mason.nvim",
 		lazy = false,
+		priority = 500,
 		config = true,
+		build = ":MasonUpdate",
 	},
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		lazy = false,
+		priority = 450,
 		opts = {
-			ensure_installed = {},
+			ensure_installed = {
+				"lua_ls",
+				"stylua",
+				"shfmt",
+			},
 		},
 	},
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false,
+		priority = 400,
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
@@ -20,10 +30,6 @@ return {
 		},
 		opts = {
 			servers = {
-				tsserver = {},
-				html = {},
-				svelte = {},
-
 				lua_ls = {
 					Lua = {
 						workspace = { checkThirdParty = false },
@@ -71,17 +77,11 @@ return {
 				end, { desc = "Format current buffer with LSP" })
 			end
 
-			-- Ensure the servers above are installed
-			local mason_lspconfig = require("mason-lspconfig")
-			mason_lspconfig.setup({
-				ensure_installed = vim.tbl_keys(opts.servers),
-			})
-
 			-- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-			mason_lspconfig.setup_handlers({
+			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					require("lspconfig")[server_name].setup({
 						capabilities = capabilities,
