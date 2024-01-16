@@ -1,9 +1,18 @@
 return {
 	"christoomey/vim-tmux-navigator",
-	keys = {
-		{ "<C-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Navigate to left window" },
-		{ "<C-j>", "<cmd>TmuxNavigateDown<cr>", desc = "Navigate to down window" },
-		{ "<C-k>", "<cmd>TmuxNavigateUp<cr>", desc = "Navigate to up window" },
-		{ "<C-l>", "<cmd>TmuxNavigateRight<cr>", desc = "Navigate to right window" },
+	cmd = {
+		"TmuxNavigateLeft",
+		"TmuxNavigateDown",
+		"TmuxNavigateUp",
+		"TmuxNavigateRight",
 	},
+	keys = {
+		{ "<c-h>", "<cmd>TmuxNavigateLeft<cr>" },
+		{ "<c-j>", "<cmd>TmuxNavigateDown<cr>" },
+		{ "<c-k>", "<cmd>TmuxNavigateUp<cr>" },
+		{ "<c-l>", "<cmd>TmuxNavigateRight<cr>" },
+	},
+	init = function()
+		vim.g.tmux_navigator_no_mappings = true
+	end,
 }
