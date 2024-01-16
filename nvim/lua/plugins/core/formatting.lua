@@ -1,6 +1,9 @@
 return {
 	{
 		"stevearc/conform.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
 		keys = {
@@ -10,7 +13,7 @@ return {
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
 				mode = { "n", "v" },
-				desc = "Format Code",
+				desc = "Format Buffer",
 			},
 		},
 		opts = {

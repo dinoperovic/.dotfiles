@@ -1,6 +1,9 @@
 return {
 	{
 		"mfussenegger/nvim-lint",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			linters_by_ft = {
@@ -16,7 +19,7 @@ return {
 		},
 		-- stylua: ignore
 		keys = {
-			{ "<leader>cl", function() require("lint").try_lint() end, desc = "Lint current File" },
+			{ "<leader>cl", function() require("lint").try_lint() end, desc = "Lint Buffer" },
 		},
 		config = function(_, opts)
 			local lint = require("lint")
@@ -29,11 +32,5 @@ return {
 				end,
 			})
 		end,
-	},
-	{
-		"rshkarin/mason-nvim-lint",
-		dependencies = {
-			"williamboman/mason.nvim",
-		},
 	},
 }

@@ -21,6 +21,6 @@ require("lazy").setup({
 		lazy = false,
 	},
 	install = {
-		colorscheme = { "gruvbox-material" },
+		colorscheme = { "kanagawa" },
 	},
 })

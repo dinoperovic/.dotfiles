@@ -41,6 +41,6 @@ vim.o.termguicolors = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 
--- Split window to right
+-- Split windows correctly
 vim.o.splitright = true
-
+vim.o.splitbelow = true

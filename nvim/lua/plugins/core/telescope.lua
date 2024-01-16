@@ -25,9 +25,10 @@ return {
 		-- Enable telescope fzf native, if installed
 		pcall(require("telescope").load_extension, "fzf")
 
+		-- stylua: ignore start
 		vim.keymap.set("n", "<leader><space>", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Switch Buffer" })
-		vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, { desc = "Find Files" })
-		vim.keymap.set("n", "<C-p>", require("telescope.builtin").find_files, { desc = "Find Files" })
+		vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find Files" })
+		vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find Files" })
 		vim.keymap.set("n", "<leader>fr", require("telescope.builtin").oldfiles, { desc = "Find recent Files" })
 		vim.keymap.set("n", "<leader>?", require("telescope.builtin").oldfiles, { desc = "Find recent Files" })
 		vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, { desc = "Find Buffers" })

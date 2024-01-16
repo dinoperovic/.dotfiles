@@ -20,6 +20,7 @@ return {
 			"bash",
 			"svelte",
 			"css",
+			"scss",
 		},
 		auto_install = true,
 		sync_install = false,
