@@ -4,35 +4,35 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 
 # Directories
-alias cd. "cd ~/.dotfiles"
-alias cdp "cd ~/Dev/Projects"
-alias cdpl "cd ~/Dev/Playground"
+abbr cd. "cd ~/.dotfiles"
+abbr cdp "cd ~/Dev/Projects"
+abbr cdpl "cd ~/Dev/Playground"
 
 # Generic
-alias c clear
+abbr c clear
 alias tree "tree -C"
 alias cat bat
 
 # Ripgrep
-alias rgf "rg --files --hidden | rg"
+abbr rgf "rg --files --hidden | rg"
 
 # Vim
-alias vi nvim
-alias vim nvim
+abbr vi nvim
+abbr vim nvim
 
 # Python & Django
-alias py python
-alias wp "which python"
-alias dj "python manage.py"
-alias dja django-admin
+abbr py python
+abbr wp "which python"
+abbr dj "python manage.py"
+abbr dja django-admin
 
 # Poetry
-alias p poetry
-alias pdj "poetry run python manage.py"
-alias pdja "poetry run django-admin"
+abbr p poetry
+abbr pdj "poetry run python manage.py"
+abbr pdja "poetry run django-admin"
 
 # Node
-set --universal nvm_default_version v20.5.1
+set --universal nvm_default_version v21.6.0
 
 # Rust
 set PATH ~/.cargo/bin $PATH
@@ -42,30 +42,31 @@ set -x GOPATH ~/.go
 set PATH $GOPATH/bin $PATH
 
 # Git
-alias g git
-alias ga "git add"
-alias gc "git commit"
-alias gd "git diff"
-alias gl "git pull"
-alias gm "git merge"
-alias gr "git rebase"
-alias gb "git branch"
-alias gp "git push"
-alias gco "git checkout"
-alias gst "git status"
-alias gg lazygit
+abbr g git
+abbr ga "git add"
+abbr gb "git branch"
+abbr gc "git commit"
+abbr gco "git checkout"
+abbr gd "git diff"
+abbr gf "git fetch"
+abbr gl "git pull"
+abbr gm "git merge"
+abbr gp "git push"
+abbr gr "git rebase"
+abbr gst "git status"
+abbr gg lazygit
 
 # Docker & Kubernetes
-alias d docker
-alias dc "docker compose"
-alias k kubectl
-alias dd lazydocker
+abbr d docker
+abbr dc "docker compose"
+abbr k kubectl
+abbr dd lazydocker
 
 # Terraform
-alias tf terraform
+abbr tf terraform
 
 # React Native
-alias rn react-native
+abbr rn react-native
 
 # Rust
 set PATH ~/.cargo/bin $PATH
