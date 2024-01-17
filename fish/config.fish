@@ -17,8 +17,8 @@ alias cat bat
 abbr rgf "rg --files --hidden | rg"
 
 # Vim
-abbr vi nvim
-abbr vim nvim
+alias vi nvim
+alias vim nvim
 
 # Python & Django
 abbr py python
