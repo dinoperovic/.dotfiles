@@ -25,29 +25,7 @@ return {
 				-- core
 				lua = { "stylua" },
 				sh = { "shfmt" },
-
-				-- javascript/typescript
-				javascript = { "prettier" },
-				typescript = { "prettier" },
-
-				-- frontend
-				javascriptreact = { "prettier" },
-				typescriptreact = { "prettier" },
-				vue = { "prettier" },
-				svelte = { "prettier" },
-				css = { "prettier" },
-				scss = { "prettier" },
-				less = { "prettier" },
-				html = { "prettier" },
-				handlebars = { "prettier" },
-
-				-- other
-				json = { "prettier" },
-				jsonc = { "prettier" },
-				yaml = { "prettier" },
-				markdown = { "prettier" },
-				["markdown.mdx"] = { "prettier" },
-				graphql = { "prettier" },
+				bash = { "shfmt" },
 			},
 		},
 		init = function()

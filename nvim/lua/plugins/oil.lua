@@ -25,8 +25,14 @@ return {
 		use_default_keymaps = false,
 		view_options = { show_hidden = true },
 	},
-	-- stylua: ignore
 	keys = {
-		{ "-", function() require("oil").open() end, desc = "Open parent directory" },
+		{ "-", "<cmd>Oil<cr>", desc = "Open Parent Directory" },
+		{
+			"_",
+			function()
+				require("oil").open(vim.fn.getcwd())
+			end,
+			desc = "Open Root Directory",
+		},
 	},
 }

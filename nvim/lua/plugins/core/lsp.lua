@@ -15,15 +15,6 @@ return {
 				"lua_ls",
 				"stylua",
 				"shfmt",
-
-				-- frontend
-				"html-lsp",
-				"css-lsp",
-				"typescript-language-server",
-				"svelte-language-server",
-				"tailwindcss-language-server",
-				"eslint_d",
-				"prettier",
 			},
 		},
 	},
