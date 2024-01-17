@@ -62,12 +62,6 @@ abbr dc "docker compose"
 abbr k kubectl
 abbr dd lazydocker
 
-# Terraform
-abbr tf terraform
-
-# React Native
-abbr rn react-native
-
 # Rust
 set PATH ~/.cargo/bin $PATH
 
