@@ -2,8 +2,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Make line numbers default
+-- line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = "a"
@@ -31,7 +32,7 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
 
--- NOTE: You should make sure your terminal supports this
+-- Set true colors
 vim.o.termguicolors = true
 
 -- Spacing
@@ -41,3 +42,6 @@ vim.o.tabstop = 4
 -- Split windows correctly
 vim.o.splitright = true
 vim.o.splitbelow = true
+
+-- Highlight current line
+vim.o.cursorline = true

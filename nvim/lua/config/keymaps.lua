@@ -1,5 +1,8 @@
 local map = vim.keymap.set
 
+-- Select all
+map("n", "<M-a>", "ggVG", { desc = "Select all" })
+
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -29,9 +32,6 @@ map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsea
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
--- New file
-map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
-
 -- Quickfix/Location list
 map("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
 map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
@@ -46,6 +46,3 @@ map("n", "<space>xq", vim.diagnostic.setloclist, { desc = "Send Diagnostics to Q
 
 -- Quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
-
--- Select all
-map("n", "<M-a>", "ggVG", { desc = "Select all" })
