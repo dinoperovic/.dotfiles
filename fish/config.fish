@@ -32,7 +32,7 @@ alias pdj "poetry run python manage.py"
 alias pdja "poetry run django-admin"
 
 # Node
-set --universal nvm_default_version v18.17.1
+set --universal nvm_default_version v20.5.1
 
 # Rust
 set PATH ~/.cargo/bin $PATH
