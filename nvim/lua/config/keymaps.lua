@@ -3,7 +3,7 @@ local map = vim.keymap.set
 -- Select all
 map("n", "<M-a>", "ggVG", { desc = "Select all" })
 
--- better up/down
+-- Better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -17,7 +17,7 @@ map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move down" })
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
--- buffers
+-- Buffers
 map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 map("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
@@ -40,7 +40,6 @@ map("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
 map("n", "gl", vim.diagnostic.open_float, { desc = "Open Diagnostic in Float" })
 map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous Diagnostic" })
 map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next Diagnostic" })
-map("n", "<space>xq", vim.diagnostic.setloclist, { desc = "Send Diagnostics to Quickfix" })
 
 -- Quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
