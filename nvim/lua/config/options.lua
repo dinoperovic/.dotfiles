@@ -45,3 +45,6 @@ vim.o.splitbelow = true
 
 -- Highlight current line
 vim.o.cursorline = true
+
+-- Disable start message
+vim.o.shortmess = "I"
