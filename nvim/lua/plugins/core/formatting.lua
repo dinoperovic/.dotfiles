@@ -22,7 +22,6 @@ return {
 				lsp_fallback = true,
 			},
 			formatters_by_ft = {
-				-- core
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				bash = { "shfmt" },
