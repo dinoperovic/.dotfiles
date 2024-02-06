@@ -44,6 +44,7 @@ return {
 					vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
 				end
 
+				-- stylua: ignore start
 				nmap("<leader>cr", vim.lsp.buf.rename, "Rename")
 				nmap("<leader>ca", vim.lsp.buf.code_action, "Code Action")
 
@@ -51,6 +52,11 @@ return {
 				nmap("gr", require("telescope.builtin").lsp_references, "Goto References")
 				nmap("gI", require("telescope.builtin").lsp_implementations, "Goto Implementation")
 				nmap("gy", require("telescope.builtin").lsp_type_definitions, "Type Definition")
+
+				nmap("tgd", function() require("telescope.builtin").lsp_definitions({ jump_type = "tab" }) end, "Goto Definition (Tab)")
+				nmap("tgr", function() require("telescope.builtin").lsp_references({ jump_type = "tab" }) end, "Goto References (Tab)")
+				nmap("tgI", function() require("telescope.builtin").lsp_implementations({ jump_type = "tab" }) end, "Goto Implementation (Tab)")
+				nmap("tgy", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "tab" }) end, "Type Definition (Tab)")
 
 				-- See `:help K` for why this keymap
 				nmap("K", vim.lsp.buf.hover, "Hover Documentation")
@@ -60,9 +66,8 @@ return {
 				nmap("gD", vim.lsp.buf.declaration, "Goto Declaration")
 
 				-- Create a command `:Format` local to the LSP buffer
-				vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
-					vim.lsp.buf.format()
-				end, { desc = "Format current buffer with LSP" })
+				vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_) vim.lsp.buf.format() end, { desc = "Format current buffer with LSP" })
+				-- stylua: ignore end
 			end
 
 			-- nvim-cmp supports additional completion capabilities, so broadcast that to servers

@@ -1,4 +1,4 @@
-return 	{
+return {
 	"folke/which-key.nvim",
 	init = function()
 		vim.o.timeout = true
@@ -11,9 +11,9 @@ return 	{
 		require("which-key").setup(opts)
 		require("which-key").register({
 			mode = { "n", "v" },
-			["g"] = { name = "+goto" },
-			["]"] = { name = "+next" },
-			["["] = { name = "+prev" },
+			["g"] = { name = "goto" },
+			["]"] = { name = "next" },
+			["["] = { name = "prev" },
 			["<leader>b"] = { name = "buffer" },
 			["<leader>c"] = { name = "code" },
 			["<leader>f"] = { name = "find" },
@@ -28,4 +28,3 @@ return 	{
 		})
 	end,
 }
-
