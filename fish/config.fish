@@ -42,6 +42,10 @@ set PATH ~/.cargo/bin $PATH
 set -x GOPATH ~/.go
 set PATH $GOPATH/bin $PATH
 
+# Mojo
+set -x MODULAR_HOME ~/.modular
+set PATH $MODULAR_HOME/pkg/packages.modular.com_mojo/bin $PATH
+
 # Git
 abbr g git
 abbr ga "git add"
