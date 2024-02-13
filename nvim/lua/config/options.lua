@@ -6,45 +6,48 @@ vim.g.maplocalleader = " "
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Enable mouse mode
-vim.o.mouse = "a"
-
--- Sync clipboard between OS and Neovim.
-vim.o.clipboard = "unnamedplus"
-
--- Enable break indent
-vim.o.breakindent = true
-
--- Save undo history
-vim.o.undofile = true
-
--- Case-insensitive searching UNLESS \C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
 -- Keep signcolumn on by default
 vim.wo.signcolumn = "yes"
 
+-- Enable mouse mode
+vim.opt.mouse = "a"
+
+-- Lines of context
+vim.opt.scrolloff = 4
+
+-- Sync clipboard between OS and Neovim.
+vim.opt.clipboard = "unnamedplus"
+
+-- Enable break indent
+vim.opt.breakindent = true
+
+-- Save undo history
+vim.opt.undofile = true
+
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = "menuone,noselect"
+vim.opt.completeopt = "menuone,noselect"
 
 -- Set true colors
-vim.o.termguicolors = true
+vim.opt.termguicolors = true
 
 -- Spacing
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- Split windows correctly
-vim.o.splitright = true
-vim.o.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- Highlight current line
-vim.o.cursorline = true
+vim.opt.cursorline = true
 
 -- Disable start message
-vim.o.shortmess = "I"
+vim.opt.shortmess = "I"
