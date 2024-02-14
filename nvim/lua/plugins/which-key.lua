@@ -16,6 +16,7 @@ return {
 			["["] = { name = "prev" },
 			["<leader>b"] = { name = "buffer" },
 			["<leader>c"] = { name = "code" },
+			["<leader>cp"] = { name = "package" },
 			["<leader>f"] = { name = "find" },
 			["<leader>g"] = { name = "git" },
 			["<leader>h"] = { name = "hunk" },
