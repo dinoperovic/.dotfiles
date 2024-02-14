@@ -3,6 +3,7 @@ return {
 	dependencies = { "MunifTanjim/nui.nvim" },
 	config = function()
 		require("package-info").setup({
+			autostart = true,
 			hide_up_to_date = true,
 		})
 		-- stylua: ignore start
