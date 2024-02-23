@@ -21,6 +21,7 @@ return {
 			["gx"] = "actions.open_external",
 			["g."] = "actions.toggle_hidden",
 			["g\\"] = "actions.toggle_trash",
+			["<esc>"] = "actions.close",
 		},
 		use_default_keymaps = false,
 		view_options = { show_hidden = true },
