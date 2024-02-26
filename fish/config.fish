@@ -12,7 +12,6 @@ abbr cdpl "cd ~/Dev/Playground"
 # Generic
 abbr c clear
 alias tree "tree -C"
-alias cat bat
 
 # Ripgrep
 abbr rgf "rg --files --hidden | rg"
