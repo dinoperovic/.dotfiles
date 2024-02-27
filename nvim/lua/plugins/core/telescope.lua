@@ -10,6 +10,7 @@ return {
 				return vim.fn.executable("make") == 1
 			end,
 		},
+		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	config = function()
 		require("telescope").setup({
@@ -20,10 +21,16 @@ return {
 					},
 				},
 			},
+			extensions = {
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown({}),
+				},
+			},
 		})
 
 		-- Enable telescope fzf native, if installed
 		pcall(require("telescope").load_extension, "fzf")
+		pcall(require("telescope").load_extension, "ui-select")
 
 		-- stylua: ignore start
 		vim.keymap.set("n", "<leader><space>", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", { desc = "Switch Buffer" })
