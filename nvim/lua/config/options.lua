@@ -51,3 +51,7 @@ vim.opt.cursorline = true
 
 -- Disable start message
 vim.opt.shortmess = "I"
+
+-- Folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 99

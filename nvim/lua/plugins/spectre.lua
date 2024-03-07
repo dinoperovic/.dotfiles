@@ -3,7 +3,6 @@ return {
 	cmd = "Spectre",
 	opts = {
 		open_cmd = "noswapfile vnew",
-		live_update = true,
 	},
 	-- stylua: ignore
 	keys = {
