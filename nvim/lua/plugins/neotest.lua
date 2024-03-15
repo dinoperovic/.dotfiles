@@ -7,6 +7,8 @@ return {
 
 		-- Adapters
 		"nvim-neotest/neotest-plenary",
+
+		-- frontend
 		"marilari88/neotest-vitest",
 		"thenbe/neotest-playwright",
 	},
@@ -26,17 +28,22 @@ return {
 	},
 	config = function()
 		require("neotest").setup({
+			output = {
+				open_on_run = false,
+			},
 			adapters = {
 				require("neotest-plenary"),
+
+				-- frontend
 				require("neotest-vitest"),
 				require("neotest-playwright").adapter({
 					options = {
-						persist_project_selection = true,
 						enable_dynamic_test_discovery = true,
 					},
 				}),
 			},
 			consumers = {
+				-- frontend
 				playwright = require("neotest-playwright.consumers").consumers,
 			},
 		})
