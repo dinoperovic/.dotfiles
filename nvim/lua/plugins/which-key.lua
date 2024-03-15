@@ -20,10 +20,11 @@ return {
 			["<leader>f"] = { name = "find" },
 			["<leader>g"] = { name = "git" },
 			["<leader>h"] = { name = "hunk" },
+			["<leader>ht"] = { name = "toggle" },
 			["<leader>q"] = { name = "quit/session" },
 			["<leader>r"] = { name = "replace" },
 			["<leader>s"] = { name = "search" },
-			["<leader>t"] = { name = "toggle" },
+			["<leader>t"] = { name = "test" },
 			["<leader>w"] = { name = "windows" },
 			["<leader>x"] = { name = "diagnostics/quickfix" },
 		})

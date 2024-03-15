@@ -1,4 +1,4 @@
-return 	{
+return {
 	"lewis6991/gitsigns.nvim",
 	opts = {},
 	config = function(_, opts)
@@ -21,11 +21,10 @@ return 	{
 		map("n", "<leader>hb", function() gs.blame_line({ full = true }) end, "Blame Line")
 		map("n", "<leader>hd", gs.diffthis, "Diff This")
 		map("n", "<leader>hD", function() gs.diffthis("~") end, "Diff This ~")
-		map("n", "<leader>tb", gs.toggle_current_line_blame, "Toggle Git current Line Blame")
-		map("n", "<leader>td", gs.toggle_deleted, "Toggle Git Deleted")
+		map("n", "<leader>htb", gs.toggle_current_line_blame, "Toggle Git current Line Blame")
+		map("n", "<leader>htd", gs.toggle_deleted, "Toggle Git Deleted")
 
 		-- Text object
 		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
 	end,
 }
-
