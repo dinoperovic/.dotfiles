@@ -15,6 +15,23 @@ return {
 				"lua_ls",
 				"stylua",
 				"shfmt",
+
+				-- frontend
+				"typescript-language-server",
+				"tailwindcss-language-server",
+				"svelte-language-server",
+				"html-lsp",
+				"css-lsp",
+				"eslint-lsp",
+				"prettierd",
+
+				-- go
+				"gopls",
+				"goimports",
+				"gofumpt",
+
+				-- rust
+				"rust_analyzer",
 			},
 		},
 	},

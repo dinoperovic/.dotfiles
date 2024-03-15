@@ -11,6 +11,27 @@ return {
 			"vim",
 			"bash",
 			"fish",
+			"toml",
+
+			-- frontend
+			"javascript",
+			"typescript",
+			"jsdoc",
+			"tsx",
+			"css",
+			"scss",
+			"html",
+
+			-- go
+			"go",
+			"gomod",
+			"gowork",
+			"gosum",
+			"templ",
+
+			-- rust
+			"ron",
+			"rust",
 		},
 		auto_install = true,
 		sync_install = false,
@@ -71,6 +92,14 @@ return {
 			},
 		},
 	},
+	init = function()
+		vim.filetype.add({
+			extension = {
+				-- go
+				templ = "templ",
+			},
+		})
+	end,
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
 
