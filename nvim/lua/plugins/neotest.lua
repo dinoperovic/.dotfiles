@@ -8,6 +8,7 @@ return {
 		-- Adapters
 		"nvim-neotest/neotest-plenary",
 		"marilari88/neotest-vitest",
+		"thenbe/neotest-playwright",
 	},
 	-- stylua: ignore
 	keys = {
@@ -19,12 +20,24 @@ return {
 		{ "<leader>to", function() require("neotest").output.open() end, desc = "Show Output" },
 		{ "<leader>tO", function() require("neotest").output_panel.toggle() end, desc = "Toggle Output Panel" },
 		{ "<leader>tS", function() require("neotest").run.stop() end, desc = "Stop" },
+
+		-- playwright
+		{ "<leader>ta", function() require("neotest").playwright.attachment() end, desc = "Launch test attachment" },
 	},
 	config = function()
 		require("neotest").setup({
 			adapters = {
 				require("neotest-plenary"),
 				require("neotest-vitest"),
+				require("neotest-playwright").adapter({
+					options = {
+						persist_project_selection = true,
+						enable_dynamic_test_discovery = true,
+					},
+				}),
+			},
+			consumers = {
+				playwright = require("neotest-playwright.consumers").consumers,
 			},
 		})
 	end,
