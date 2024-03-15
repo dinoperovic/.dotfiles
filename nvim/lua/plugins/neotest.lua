@@ -39,11 +39,6 @@ return {
 			consumers = {
 				playwright = require("neotest-playwright.consumers").consumers,
 			},
-			quickfix = {
-				open = function()
-					require("trouble").open({ mode = "quickfix", focus = false })
-				end,
-			},
 		})
 	end,
 }
