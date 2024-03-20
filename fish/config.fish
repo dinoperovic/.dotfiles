@@ -6,8 +6,8 @@ set -x VISUAL nvim
 
 # Directories
 abbr cd. "cd ~/.dotfiles"
-abbr cdp "cd ~/Dev/Projects"
-abbr cdpl "cd ~/Dev/Playground"
+abbr cdp "cd ~/Dev/projects"
+abbr cdpl "cd ~/Dev/playground"
 
 # Generic
 abbr c clear
