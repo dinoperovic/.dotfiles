@@ -20,6 +20,11 @@ abbr rgf "rg --files --hidden | rg"
 alias vi nvim
 alias vim nvim
 
+# pyenv
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin $PATH
+status --is-interactive; and . (pyenv init -|psub)
+
 # Python & Django
 abbr py python
 abbr wp "which python"
