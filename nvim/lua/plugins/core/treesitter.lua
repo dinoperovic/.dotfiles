@@ -22,6 +22,12 @@ return {
 			"scss",
 			"html",
 
+			-- python
+			"python",
+			"rst",
+			"htmldjango",
+			"ninja",
+
 			-- go
 			"go",
 			"gomod",

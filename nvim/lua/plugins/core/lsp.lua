@@ -25,6 +25,11 @@ return {
 				"eslint-lsp",
 				"prettierd",
 
+				-- python
+				"pylsp",
+				"ruff-lsp",
+				"mypy",
+
 				-- go
 				"gopls",
 				"goimports",
@@ -52,13 +57,32 @@ return {
 						diagnostics = { disable = { "missing-fields" } },
 					},
 				},
+				pylsp = {
+					pylsp = {
+						plugins = {
+							-- Disable linting in favor of Ruff.
+							autopep8 = { enabled = false },
+							flake8 = { enabled = false },
+							mccabe = { enabled = false },
+							pycodestyle = { enabled = false },
+							pyflakes = { enabled = false },
+							pylint = { enabled = false },
+							yapf = { enabled = false },
+						},
+					},
+				},
 			},
 		},
 		config = function(_, opts)
 			--  This function gets run when an LSP connects to a particular buffer.
-			local on_attach = function(_, bufnr)
+			local on_attach = function(client, bufnr)
 				local nmap = function(keys, func, desc)
 					vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
+				end
+
+				if client.name == "ruff_lsp" then
+					-- Disable hover in favor of pylsp.
+					client.server_capabilities.hoverProvider = false
 				end
 
 				-- stylua: ignore start

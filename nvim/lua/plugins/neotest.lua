@@ -11,6 +11,9 @@ return {
 		-- frontend
 		"marilari88/neotest-vitest",
 		"thenbe/neotest-playwright",
+
+		-- python
+		"nvim-neotest/neotest-python",
 	},
 	-- stylua: ignore
 	keys = {
@@ -41,6 +44,9 @@ return {
 						enable_dynamic_test_discovery = true,
 					},
 				}),
+
+				-- python
+				require("neotest-python"),
 			},
 			consumers = {
 				-- frontend
