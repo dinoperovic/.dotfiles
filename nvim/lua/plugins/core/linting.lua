@@ -11,6 +11,7 @@ return {
 		},
 		opts = {
 			linters_by_ft = {
+				-- python
 				python = { "mypy" },
 			},
 		},

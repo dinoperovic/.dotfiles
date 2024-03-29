@@ -28,7 +28,6 @@ return {
 				-- python
 				"pylsp",
 				"ruff-lsp",
-				"mypy",
 
 				-- go
 				"gopls",
@@ -60,7 +59,7 @@ return {
 				pylsp = {
 					pylsp = {
 						plugins = {
-							-- Disable linting in favor of Ruff.
+							-- Disable linting/formatting in favor of Ruff.
 							autopep8 = { enabled = false },
 							flake8 = { enabled = false },
 							mccabe = { enabled = false },
