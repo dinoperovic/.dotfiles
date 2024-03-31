@@ -31,11 +31,6 @@ abbr wp "which python"
 abbr dj "python manage.py"
 abbr dja django-admin
 
-# Poetry
-abbr p poetry
-abbr pdj "poetry run python manage.py"
-abbr pdja "poetry run django-admin"
-
 # Node
 set --universal nvm_default_version v21.6.0
 
