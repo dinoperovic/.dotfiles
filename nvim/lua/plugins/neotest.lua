@@ -4,16 +4,13 @@ return {
 		"nvim-lua/plenary.nvim",
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
+		"nvim-neotest/nvim-nio",
 
 		-- Adapters
 		"nvim-neotest/neotest-plenary",
-
-		-- frontend
+		"nvim-neotest/neotest-python",
 		"marilari88/neotest-vitest",
 		"thenbe/neotest-playwright",
-
-		-- python
-		"nvim-neotest/neotest-python",
 	},
 	-- stylua: ignore
 	keys = {
@@ -36,17 +33,13 @@ return {
 			},
 			adapters = {
 				require("neotest-plenary"),
-
-				-- frontend
+				require("neotest-python"),
 				require("neotest-vitest"),
 				require("neotest-playwright").adapter({
 					options = {
 						enable_dynamic_test_discovery = true,
 					},
 				}),
-
-				-- python
-				require("neotest-python"),
 			},
 			consumers = {
 				-- frontend

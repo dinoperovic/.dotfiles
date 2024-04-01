@@ -26,7 +26,7 @@ return {
 				"prettierd",
 
 				-- python
-				"pylsp",
+				"pyright",
 				"ruff-lsp",
 
 				-- go
@@ -56,18 +56,9 @@ return {
 						diagnostics = { disable = { "missing-fields" } },
 					},
 				},
-				pylsp = {
-					pylsp = {
-						plugins = {
-							-- Disable linting/formatting in favor of Ruff.
-							autopep8 = { enabled = false },
-							flake8 = { enabled = false },
-							mccabe = { enabled = false },
-							pycodestyle = { enabled = false },
-							pyflakes = { enabled = false },
-							pylint = { enabled = false },
-							yapf = { enabled = false },
-						},
+				pyright = {
+					pyright = {
+						disableOrganizeImports = true,
 					},
 				},
 			},
