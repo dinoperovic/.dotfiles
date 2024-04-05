@@ -84,7 +84,7 @@ set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline
 set -gx GPG_TTY (tty)
 
 # Google Cloud
-source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 
 # tmux
 set -Ux fish_tmux_default_session_name dino
