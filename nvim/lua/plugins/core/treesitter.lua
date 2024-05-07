@@ -12,6 +12,7 @@ return {
 			"bash",
 			"fish",
 			"toml",
+			"terraform",
 
 			-- frontend
 			"javascript",

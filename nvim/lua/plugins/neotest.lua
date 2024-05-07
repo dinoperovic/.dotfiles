@@ -29,7 +29,7 @@ return {
 	config = function()
 		require("neotest").setup({
 			output = {
-				open_on_run = false,
+				open_on_run = "short",
 			},
 			adapters = {
 				require("neotest-plenary"),

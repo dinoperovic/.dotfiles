@@ -15,6 +15,7 @@ return {
 				"lua_ls",
 				"stylua",
 				"shfmt",
+				"terraform-ls",
 
 				-- frontend
 				"typescript-language-server",
