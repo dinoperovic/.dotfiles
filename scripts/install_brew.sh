@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "### updating brew..."
+echo "### installing homebrew..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 
-echo "### installing base packages..."
+echo "### installing common packages..."
 brew install bat fzf ripgrep httpie wget
 mkdir -p ~/.config
 
@@ -14,9 +15,6 @@ rm -rf ~/.config/fish
 mkdir -p ~/.config/fish/conf.d
 test -d /opt/homebrew/ && echo 'eval (/opt/homebrew/bin/brew shellenv)' >~/.config/fish/conf.d/_brew.fish
 test -d /home/linuxbrew/.linuxbrew && echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >~/.config/fish/conf.d/_brew.fish
-
-echo "### installing gcloud..."
-brew list google-cloud-sdk || brew install --cask google-cloud-sdk
 
 echo "### installing lazygit..."
 brew list lazygit || brew install jesseduffield/lazygit/lazygit
@@ -39,6 +37,9 @@ brew list starship || brew install starship
 echo "### installing tmux..."
 brew list tmux || brew install tmux
 [ ! -d "$HOME/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+echo "### installing gcloud..."
+brew list google-cloud-sdk || brew install --cask google-cloud-sdk
 
 echo "### installing zed..."
 brew list zed || brew install --cask zed
