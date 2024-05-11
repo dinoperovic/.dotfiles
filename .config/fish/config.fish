@@ -29,17 +29,9 @@ status --is-interactive; and . (pyenv init -|psub)
 abbr py python
 abbr wp "which python"
 abbr dj "python manage.py"
-abbr dja django-admin
-
-# Node
-set --universal nvm_default_version v21.6.0
 
 # Rust
 set PATH ~/.cargo/bin $PATH
-
-# Go
-set -x GOPATH ~/.go
-set PATH $GOPATH/bin $PATH
 
 # Mojo
 set -x MODULAR_HOME ~/.modular
@@ -60,22 +52,9 @@ abbr gr "git rebase"
 abbr gst "git status"
 abbr gg lazygit
 
-# Docker & Kubernetes
+# Docker
 abbr d docker
 abbr dc "docker compose"
-abbr k kubectl
-abbr dd lazydocker
-
-# Rust
-set PATH ~/.cargo/bin $PATH
-
-# Go
-set -x GOPATH ~/dev/.go
-set PATH $GOPATH/bin $PATH
-
-# Set language
-set -x LC_ALL en_US.UTF-8
-set -x LANG en_US.UTF-8
 
 # Openssl
 set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib'
@@ -83,8 +62,12 @@ set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline
 # GPG
 set -gx GPG_TTY (tty)
 
+# Set language
+set -x LC_ALL en_US.UTF-8
+set -x LANG en_US.UTF-8
+
 # Google Cloud
-# source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 
 # tmux
 set -Ux fish_tmux_autostart false
