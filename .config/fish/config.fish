@@ -87,6 +87,7 @@ set -gx GPG_TTY (tty)
 # source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 
 # tmux
+set -Ux fish_tmux_autostart false
 set -Ux fish_tmux_default_session_name dino
 
 # Enable VI (hybrid) key bindings

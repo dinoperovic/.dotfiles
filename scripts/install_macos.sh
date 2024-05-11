@@ -8,33 +8,35 @@ brew install bat fzf ripgrep httpie wget
 mkdir -p ~/.config
 
 echo "### installing fish..."
-brew install fish
-brew install fisher
+brew list fish || brew install fish
+brew list fisher || brew install fisher
 rm -rf ~/.config/fish
 mkdir -p ~/.config/fish/conf.d
+echo 'eval (/opt/homebrew/bin/brew shellenv)' >~/.config/fish/conf.d/_brew.fish
 
 echo "### installing gcloud..."
-brew install --cask google-cloud-sdk
+brew list google-cloud-sdk || brew install --cask google-cloud-sdk
 
 echo "### installing lazygit..."
-brew install jesseduffield/lazygit/lazygit
+brew list lazygit || brew install jesseduffield/lazygit/lazygit
 
 echot "### installing gpg"
-brew install gpg
-rm -rf ~/.gnupg
-mkdir ~/.gnupg
+brew list gpg || brew install gpg
+mkdir -p ~/.gnupg
 chmod 700 ~/.gnupg
 
 echo "### installing neovim..."
-brew install neovim
+brew list neovim || brew install neovim
 mkdir -p ~/.config/nvim
 
 echo "### installing starship..."
-brew install starship
+brew list starship || brew install starship
 
 echo "### installing tmux..."
-brew install tmux
+brew list tmux || brew install tmux
 [ ! -d "$HOME/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "### installing zed..."
-brew install --cask zed
+brew list zed || brew install --cask zed
+rm -rf ~/.config/zed
+mkdir ~/.config/zed
