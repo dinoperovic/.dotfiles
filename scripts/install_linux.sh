@@ -12,7 +12,7 @@ sudo apt install -y fish
 fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 rm -rf ~/.config/fish
-mkdir -p ~/.config/fish/conf.d
+mkdir -p ~/.config/fish
 
 echo "### installing lazygit..."
 sudo apt install -y install jesseduffield/lazygit/lazygit
