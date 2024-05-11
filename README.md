@@ -2,6 +2,11 @@
 
 Collection of my dotfiles.
 
-## Setup
+## Install
 
-To install run `./install.sh`
+First install the [stow](https://www.gnu.org/software/stow/) package and then run:
+
+```sh
+./scripts/install_macos.sh
+stow .
+```
