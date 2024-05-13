@@ -15,8 +15,6 @@ brew list fish || brew install fish
 brew list fisher || brew install fisher
 rm -rf ~/.config/fish
 mkdir -p ~/.config/fish/conf.d
-test -d /opt/homebrew/ && echo 'eval (/opt/homebrew/bin/brew shellenv)' >~/.config/fish/conf.d/_brew.fish
-test -d /home/linuxbrew/.linuxbrew && echo 'eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >~/.config/fish/conf.d/_brew.fish
 
 echo "### installing antigen..."
 brew install antigen

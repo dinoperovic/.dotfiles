@@ -1,5 +1,4 @@
-# Plugins
-source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
+# Plugins source $HOMEBREW_PREFIX/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
