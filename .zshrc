@@ -51,4 +51,4 @@ export GPG_TTY=$(tty)
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib"
 
 eval "$(fzf --zsh)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
