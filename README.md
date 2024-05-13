@@ -4,9 +4,9 @@ Collection of my dotfiles.
 
 ## Install
 
-First install the [stow](https://www.gnu.org/software/stow/) package and then run:
+Use [stow](https://www.gnu.org/software/stow/) as symlink manager:
 
 ```sh
-./scripts/install_macos.sh
+./scripts/install_brew.sh
 stow .
 ```
