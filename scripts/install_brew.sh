@@ -34,6 +34,9 @@ mkdir -p ~/.config/nvim
 echo "### installing pyenv..."
 brew list pyenv || brew install pyenv
 
+echo "### installing go..."
+brew list go || brew install go
+
 echo "### installing starship..."
 brew list starship || brew install starship
 
