@@ -67,7 +67,7 @@ set -x LC_ALL en_US.UTF-8
 set -x LANG en_US.UTF-8
 
 # Google Cloud
-source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
+test -d "$(brew --prefix)/share/google-cloud-sdk" && source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 
 # tmux
 set -Ux fish_tmux_autostart false
