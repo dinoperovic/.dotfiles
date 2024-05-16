@@ -2,8 +2,8 @@
 
 echo "### installing homebrew..."
 yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-test -d /opt/homebrew/ && eval $(/opt/homebrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -d /opt/homebrew/ && eval "$(/opt/homebrew/bin/brew shellenv)"
+test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew update
 
 echo "### installing common packages..."
@@ -12,7 +12,7 @@ mkdir -p ~/.config
 
 echo "### installing fish..."
 brew list fish || brew install fish
-brew list fisher || brew install fisher
+
 rm -rf ~/.config/fish
 mkdir -p ~/.config/fish/conf.d
 
