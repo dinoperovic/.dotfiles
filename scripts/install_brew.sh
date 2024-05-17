@@ -7,7 +7,7 @@ test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/bre
 brew update
 
 echo "### installing common packages..."
-brew install bat fzf ripgrep httpie wget stow
+brew install bat fzf ripgrep httpie wget stow keychain
 mkdir -p ~/.config
 
 echo "### installing fish..."
