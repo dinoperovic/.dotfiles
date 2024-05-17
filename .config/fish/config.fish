@@ -76,8 +76,8 @@ set -Ux fish_tmux_default_session_name dino
 # Enable VI (hybrid) key bindings
 set fish_key_bindings fish_hybrid_key_bindings
 
-# Start ssh-agent with key
-keychain --eval dino
+# Add SSH key
+eval "$(keychain --eval --quick --quiet --noask dino)"
 
 # Starship prompt
 starship init fish | source
