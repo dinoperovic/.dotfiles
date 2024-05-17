@@ -5,7 +5,13 @@ return {
 		vim.o.timeoutlen = 300
 	end,
 	opts = {
-		plugins = { spelling = true },
+		plugins = {
+			spelling = true,
+		},
+		icons = {
+			breadcrumb = ">>",
+			separator = "->",
+		},
 	},
 	config = function(_, opts)
 		require("which-key").setup(opts)

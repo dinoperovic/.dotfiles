@@ -90,10 +90,6 @@ return {
 				nmap("tgI", function() require("telescope.builtin").lsp_implementations({ jump_type = "tab" }) end, "Goto Implementation (Tab)")
 				nmap("tgy", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "tab" }) end, "Type Definition (Tab)")
 
-				-- See `:help K` for why this keymap
-				nmap("K", vim.lsp.buf.hover, "Hover Documentation")
-				nmap("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
-
 				-- Lesser used LSP functionality
 				nmap("gD", vim.lsp.buf.declaration, "Goto Declaration")
 

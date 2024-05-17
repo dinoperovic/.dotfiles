@@ -36,10 +36,5 @@ map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
 map("n", "[q", vim.cmd.cprev, { desc = "Previous quickfix" })
 map("n", "]q", vim.cmd.cnext, { desc = "Next quickfix" })
 
--- Diagnostic keymaps
-map("n", "gl", vim.diagnostic.open_float, { desc = "Open Diagnostic in Float" })
-map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous Diagnostic" })
-map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next Diagnostic" })
-
 -- Quit
 map("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
