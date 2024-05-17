@@ -38,6 +38,7 @@ return {
 			"<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>",
 			{ desc = "Switch Buffer" }
 		)
+		vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
 		vim.keymap.set("n", "<D-p>", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
 		vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find Files (Hidden)" })
 		vim.keymap.set(
