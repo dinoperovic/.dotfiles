@@ -76,5 +76,7 @@ set -Ux fish_tmux_default_session_name dino
 # Enable VI (hybrid) key bindings
 set fish_key_bindings fish_hybrid_key_bindings
 
+eval "$(ssh-agent -c)"
+
 # Starship prompt
 starship init fish | source
