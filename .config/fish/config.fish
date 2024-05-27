@@ -58,6 +58,7 @@ abbr gg lazygit
 # Docker
 abbr d docker
 abbr dc "docker compose"
+abbr dd lazydocker
 
 # Openssl
 set -x LDFLAGS '-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib'
