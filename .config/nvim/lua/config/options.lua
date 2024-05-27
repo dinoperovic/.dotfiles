@@ -47,7 +47,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- Highlight current line
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- Disable start message
 vim.opt.shortmess = "I"

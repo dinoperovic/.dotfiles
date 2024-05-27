@@ -1,6 +1,6 @@
 # Base
 set PATH /usr/local/sbin ~/.local/bin $PATH
-set XDG_CONFIG_HOME $HOME/.config
+set -x XDG_CONFIG_HOME $HOME/.config
 set -x EDITOR nvim
 set -x VISUAL nvim
 
