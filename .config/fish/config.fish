@@ -9,6 +9,9 @@ abbr cd. "cd ~/.dotfiles"
 abbr cdp "cd ~/Dev/projects"
 abbr cdpl "cd ~/Dev/playground"
 
+# eza
+set -Ux EZA_STANDARD_OPTIONS --long --all --binary --icons --group --group-directories-first
+
 # Generic
 abbr c clear
 alias tree "tree -C"
