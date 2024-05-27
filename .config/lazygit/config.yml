@@ -1,8 +1,7 @@
 gui:
-  showFileTree: true
+  border: rounded
 
   # cyberdream theme
-  border: rounded
   theme:
     activeBorderColor:
       - "#5ef1ff"
