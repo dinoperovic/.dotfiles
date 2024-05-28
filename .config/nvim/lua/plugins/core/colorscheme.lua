@@ -3,7 +3,8 @@ return {
 	-- 	"sainnhe/gruvbox-material",
 	-- 	lazy = false,
 	-- 	priority = 1000,
-	-- 	config = function()
+	-- 	opts = {},
+	-- 	init = function()
 	-- 		vim.cmd.colorscheme("gruvbox-material")
 	-- 	end,
 	-- },
@@ -11,35 +12,50 @@ return {
 	-- 	"nyoom-engineering/oxocarbon.nvim",
 	-- 	lazy = false,
 	-- 	priority = 1000,
-	-- 	config = function()
+	-- 	opts = {},
+	-- 	init = function()
 	-- 		vim.cmd.colorscheme("oxocarbon")
 	-- 	end,
 	-- },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			style = "night",
+		},
+		init = function()
+			vim.cmd.colorscheme("tokyonight")
+		end,
+	},
 	-- {
-	-- 	"folke/tokyonight.nvim",
+	-- 	"scottmckendry/cyberdream.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("cyberdream").setup({
+	-- 			transparent = true,
+	-- 		})
+	-- 	end,
+	-- 	init = function()
+	-- 		vim.cmd.colorscheme("cyberdream")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"olivercederborg/poimandres.nvim",
 	-- 	lazy = false,
 	-- 	priority = 1000,
 	-- 	opts = {},
-	-- 	config = function()
-	-- 		vim.cmd.colorscheme("tokyonight")
+	-- 	init = function()
+	-- 		vim.cmd.colorscheme("poimandres")
 	-- 	end,
 	-- },
-	{
-		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("cyberdream").setup({
-				transparent = true,
-			})
-			vim.cmd.colorscheme("cyberdream")
-		end,
-	},
 	-- {
 	-- 	"rebelot/kanagawa.nvim",
 	-- 	lazy = false,
 	-- 	priority = 1000,
-	-- 	config = function()
+	-- 	opts = {},
+	-- 	init = function()
 	-- 		vim.cmd.colorscheme("kanagawa")
 	-- 	end,
 	-- },
