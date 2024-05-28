@@ -22,6 +22,9 @@ brew install antigen
 echo "### installing lazygit..."
 brew list lazygit || brew install jesseduffield/lazygit/lazygit
 
+echo "### installing lazydocker..."
+brew list lazydocker || brew install jesseduffield/lazydocker/lazydocker
+
 echot "### installing gpg"
 brew list gpg || brew install gpg
 mkdir -p ~/.gnupg
