@@ -6,6 +6,7 @@ return {
 	-- 	opts = {},
 	-- 	init = function()
 	-- 		vim.cmd.colorscheme("gruvbox-material")
+	-- 		vim.opt.background = "light"
 	-- 	end,
 	-- },
 	-- {
