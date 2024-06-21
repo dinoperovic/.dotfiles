@@ -28,6 +28,7 @@ return {
 
 				-- python
 				"pyright",
+				"mypy",
 				"ruff-lsp",
 
 				-- go
@@ -60,6 +61,11 @@ return {
 				pyright = {
 					pyright = {
 						disableOrganizeImports = true,
+					},
+					python = {
+						analysis = {
+							typeCheckingMode = "off",
+						},
 					},
 				},
 			},

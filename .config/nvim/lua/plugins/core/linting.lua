@@ -10,7 +10,9 @@ return {
 			{ "<leader>cl", function() require("lint").try_lint() end, desc = "Lint Buffer" },
 		},
 		opts = {
-			linters_by_ft = {},
+			linters_by_ft = {
+				python = { "mypy" },
+			},
 		},
 		config = function(_, opts)
 			local lint = require("lint")

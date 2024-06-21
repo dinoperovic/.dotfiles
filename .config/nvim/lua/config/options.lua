@@ -55,3 +55,8 @@ vim.opt.shortmess = "I"
 -- Folding
 vim.opt.foldmethod = "indent"
 vim.opt.foldlevelstart = 99
+
+-- Diagnostics
+vim.diagnostic.config({
+	float = { source = true },
+})
