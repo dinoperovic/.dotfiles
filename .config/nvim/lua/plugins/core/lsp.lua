@@ -91,10 +91,15 @@ return {
 				nmap("gI", require("telescope.builtin").lsp_implementations, "Goto Implementation")
 				nmap("gy", require("telescope.builtin").lsp_type_definitions, "Type Definition")
 
-				nmap("tgd", function() require("telescope.builtin").lsp_definitions({ jump_type = "tab" }) end, "Goto Definition (Tab)")
-				nmap("tgr", function() require("telescope.builtin").lsp_references({ jump_type = "tab" }) end, "Goto References (Tab)")
-				nmap("tgI", function() require("telescope.builtin").lsp_implementations({ jump_type = "tab" }) end, "Goto Implementation (Tab)")
-				nmap("tgy", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "tab" }) end, "Type Definition (Tab)")
+				nmap("gsd", function() require("telescope.builtin").lsp_definitions({ jump_type = "vsplit" }) end, "Goto Definition (Split)")
+				nmap("gsr", function() require("telescope.builtin").lsp_references({ jump_type = "vsplit" }) end, "Goto References (Split)")
+				nmap("gsI", function() require("telescope.builtin").lsp_implementations({ jump_type = "vsplit" }) end, "Goto Implementation (Split)")
+				nmap("gsy", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "vsplit" }) end, "Type Definition (Split)")
+
+				nmap("gtd", function() require("telescope.builtin").lsp_definitions({ jump_type = "tab" }) end, "Goto Definition (Tab)")
+				nmap("gtr", function() require("telescope.builtin").lsp_references({ jump_type = "tab" }) end, "Goto References (Tab)")
+				nmap("gtI", function() require("telescope.builtin").lsp_implementations({ jump_type = "tab" }) end, "Goto Implementation (Tab)")
+				nmap("gty", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "tab" }) end, "Type Definition (Tab)")
 
 				-- Lesser used LSP functionality
 				nmap("gD", vim.lsp.buf.declaration, "Goto Declaration")
