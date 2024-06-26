@@ -7,7 +7,7 @@ test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/bre
 brew update
 
 echo "### installing common packages..."
-brew install bat fzf ripgrep httpie wget stow keychain zoxide eza
+brew install bat fzf ripgrep httpie wget stow keychain zoxide eza git gh
 mkdir -p ~/.config
 
 echo "### installing fish..."
@@ -54,3 +54,6 @@ echo "### installing zed..."
 brew list zed || brew install --cask zed
 rm -rf ~/.config/zed
 mkdir ~/.config/zed
+
+echo "### installing kitty..."
+brew list kitty || brew install --cask kitty
