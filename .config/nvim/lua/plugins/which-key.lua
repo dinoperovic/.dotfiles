@@ -25,6 +25,7 @@ return {
 			["<leader>cp"] = { name = "package" },
 			["<leader>f"] = { name = "find" },
 			["<leader>g"] = { name = "git" },
+			["<leader>gh"] = { name = "github" },
 			["<leader>h"] = { name = "hunk" },
 			["<leader>ht"] = { name = "toggle" },
 			["<leader>q"] = { name = "quit/session" },
