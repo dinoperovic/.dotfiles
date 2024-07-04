@@ -1,5 +1,6 @@
 return {
 	"almo7aya/openingh.nvim",
+	lazy = false,
 	keys = {
 		{ "<leader>ghr", "<cmd>OpenInGHRepo<cr>", desc = "Open github repo" },
 		{ "<leader>ghf", "<cmd>OpenInGHFile<cr>", desc = "Open github file" },
