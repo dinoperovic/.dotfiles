@@ -96,11 +96,6 @@ return {
 				nmap("gsI", function() require("telescope.builtin").lsp_implementations({ jump_type = "vsplit" }) end, "Goto Implementation (Split)")
 				nmap("gsy", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "vsplit" }) end, "Type Definition (Split)")
 
-				nmap("gtd", function() require("telescope.builtin").lsp_definitions({ jump_type = "tab" }) end, "Goto Definition (Tab)")
-				nmap("gtr", function() require("telescope.builtin").lsp_references({ jump_type = "tab" }) end, "Goto References (Tab)")
-				nmap("gtI", function() require("telescope.builtin").lsp_implementations({ jump_type = "tab" }) end, "Goto Implementation (Tab)")
-				nmap("gty", function() require("telescope.builtin").lsp_type_definitions({ jump_type = "tab" }) end, "Type Definition (Tab)")
-
 				-- Lesser used LSP functionality
 				nmap("gD", vim.lsp.buf.declaration, "Goto Declaration")
 
