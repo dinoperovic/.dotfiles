@@ -26,6 +26,7 @@ return {
 			["<leader>f"] = { name = "find" },
 			["<leader>g"] = { name = "git" },
 			["<leader>gh"] = { name = "github" },
+			["<leader>ghy"] = { name = "yank" },
 			["<leader>h"] = { name = "hunk" },
 			["<leader>ht"] = { name = "toggle" },
 			["<leader>q"] = { name = "quit/session" },
