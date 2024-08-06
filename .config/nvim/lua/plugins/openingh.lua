@@ -7,4 +7,7 @@ return {
 		{ "<leader>ghf", "<cmd>'<,'>OpenInGHFileLines<cr>", mode = "v", desc = "Open github file lines" },
 		{ "<leader>ghl", "<cmd>OpenInGHFileLines<cr>", desc = "Open github line" },
 	},
+	init = function()
+		vim.g.openingh_copy_to_register = true
+	end,
 }
