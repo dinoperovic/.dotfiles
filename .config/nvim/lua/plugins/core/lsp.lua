@@ -18,7 +18,7 @@ return {
 				"terraform-ls",
 
 				-- frontend
-				"typescript-language-server",
+				"vtsls",
 				"tailwindcss-language-server",
 				"svelte-language-server",
 				"html-lsp",
