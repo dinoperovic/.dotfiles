@@ -21,6 +21,7 @@ return {
 				"vtsls",
 				"tailwindcss-language-server",
 				"svelte-language-server",
+				"vue-language-server",
 				"html-lsp",
 				"css-lsp",
 				"eslint-lsp",
