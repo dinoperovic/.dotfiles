@@ -13,6 +13,7 @@ return {
 			{ "<leader>cp", group = "package" },
 			{ "<leader>f", group = "find" },
 			{ "<leader>g", group = "git" },
+			{ "<leader>ga", group = "advanced" },
 			{ "<leader>gh", group = "github" },
 			{ "<leader>ghy", group = "yank" },
 			{ "<leader>h", group = "hunk" },

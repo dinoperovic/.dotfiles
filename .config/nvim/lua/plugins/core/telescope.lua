@@ -11,6 +11,15 @@ return {
 			end,
 		},
 		"nvim-telescope/telescope-ui-select.nvim",
+		{
+			"aaronhallaert/advanced-git-search.nvim",
+			dependencies = {
+				"tpope/vim-fugitive",
+				"tpope/vim-rhubarb",
+				"sindrets/diffview.nvim",
+			},
+			cmd = { "AdvancedGitSearch" },
+		},
 	},
 	config = function()
 		require("telescope").setup({
@@ -25,12 +34,16 @@ return {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown({}),
 				},
+				advanced_git_search = {
+					diff_plugin = "diffview",
+				},
 			},
 		})
 
 		-- Enable telescope fzf native, if installed
 		pcall(require("telescope").load_extension, "fzf")
 		pcall(require("telescope").load_extension, "ui-select")
+		pcall(require("telescope").load_extension, "advanced_git_search")
 
 		vim.keymap.set(
 			"n",
@@ -72,5 +85,26 @@ return {
 
 		vim.keymap.set("n", "<leader>gs", require("telescope.builtin").git_status, { desc = "Git Status" })
 		vim.keymap.set("n", "<leader>gc", require("telescope.builtin").git_commits, { desc = "Git Commits" })
+
+		-- Git advanced search
+		vim.keymap.set(
+			"n",
+			"<leader>gaS",
+			"<cmd>AdvancedGitSearch search_log_content<cr>",
+			{ desc = "Search repo log" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>gas",
+			"<cmd>AdvancedGitSearch search_log_content_file<cr>",
+			{ desc = "Search file log" }
+		)
+		vim.keymap.set("n", "<leader>gad", "<cmd>AdvancedGitSearch diff_commit_file<cr>", { desc = "Diff file commit" })
+		vim.keymap.set(
+			"n",
+			"<leader>gaD",
+			"<cmd>AdvancedGitSearch diff_branch_file<cr>",
+			{ desc = "Diff branch commit" }
+		)
 	end,
 }
