@@ -85,3 +85,6 @@ eval "$(keychain --eval --quick --quiet --noask dino)"
 
 # Starship prompt
 starship init fish | source
+
+# Set theme
+fish_config theme choose "Rosé Pine Moon"
