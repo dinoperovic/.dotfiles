@@ -1,7 +1,7 @@
 {
   "log": {
     "prefix": "log",
-    "body": ["console.log('$1', JSON.stringify($1, null, 2))"],
-    "description": "log a variable to the console"
+    "body": ["console.log('$1', JSON.stringify(${0:$1}, null, 2))"],
+    "description": "log a variable to the console 2"
   }
 }
