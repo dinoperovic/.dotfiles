@@ -18,7 +18,9 @@ return {
 		local luasnip = require("luasnip")
 
 		require("luasnip.loaders.from_vscode").lazy_load({ paths = "./snippets" })
-		require("luasnip.loaders.from_vscode").lazy_load()
+
+		-- Load friendly-snippets
+		-- require("luasnip.loaders.from_vscode").lazy_load()
 
 		luasnip.config.setup({})
 
