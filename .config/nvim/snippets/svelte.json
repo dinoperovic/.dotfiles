@@ -1,6 +1,6 @@
 {
-  "svelte-dump": {
-    "prefix": "s-dump",
+  "dump-svelte": {
+    "prefix": "dump-svelte",
     "body": ["<pre>{JSON.stringify($1, null, 2)}</pre>"],
     "description": "dump a variable in svelte html"
   }
