@@ -52,6 +52,7 @@ abbr gl "git pull"
 abbr gm "git merge"
 abbr gp "git push"
 abbr gr "git rebase"
+abbr gre "git restore"
 abbr gst "git status"
 abbr gg lazygit
 
