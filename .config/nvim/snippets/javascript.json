@@ -4,14 +4,19 @@
     "body": ["console.log('$1', ${0:$1})"],
     "description": "log a variable to the console"
   },
-  "logstr": {
+  "log-stringify": {
     "prefix": "logstr",
     "body": ["console.log('$1', JSON.stringify(${0:$1}, null, 2))"],
     "description": "log a stringified variable to the console"
   },
-  "str": {
+  "stringify": {
     "prefix": "str",
     "body": ["JSON.stringify($0)"],
     "description": "stringify a variable"
+  },
+  "script": {
+    "prefix": "scr",
+    "body": ["<script lang=\"ts\">", "\t$0", "</script>"],
+    "description": "script ts tag"
   }
 }
