@@ -19,13 +19,14 @@ return {
 
 				-- frontend
 				"vtsls",
+				"deno",
 				"tailwindcss-language-server",
 				"svelte-language-server",
 				"vue-language-server",
 				"html-lsp",
 				"css-lsp",
 				"eslint-lsp",
-				"prettierd",
+				"prettier",
 
 				-- python
 				"pyright",
@@ -50,28 +51,40 @@ return {
 			{ "j-hui/fidget.nvim", opts = {} },
 			{ "folke/neodev.nvim", opts = {} },
 		},
-		opts = {
-			servers = {
+		config = function()
+			local lspconfig = require("lspconfig")
+
+			local servers = {
 				lua_ls = {
-					Lua = {
-						workspace = { checkThirdParty = false },
-						telemetry = { enable = false },
-						diagnostics = { disable = { "missing-fields" } },
-					},
-				},
-				pyright = {
-					pyright = {
-						disableOrganizeImports = true,
-					},
-					python = {
-						analysis = {
-							typeCheckingMode = "off",
+					settings = {
+						Lua = {
+							workspace = { checkThirdParty = false },
+							telemetry = { enable = false },
+							diagnostics = { disable = { "missing-fields" } },
 						},
 					},
 				},
-			},
-		},
-		config = function(_, opts)
+				pyright = {
+					settings = {
+						pyright = {
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								typeCheckingMode = "off",
+							},
+						},
+					},
+				},
+				vtsls = {
+					root_dir = lspconfig.util.root_pattern("package.json"),
+					single_file_support = false,
+				},
+				denols = {
+					root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+				},
+			}
+
 			--  This function gets run when an LSP connects to a particular buffer.
 			local on_attach = function(client, bufnr)
 				local nmap = function(keys, func, desc)
@@ -111,11 +124,15 @@ return {
 
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
-					require("lspconfig")[server_name].setup({
+					local config = servers[server_name] or {}
+
+					lspconfig[server_name].setup({
 						capabilities = capabilities,
 						on_attach = on_attach,
-						settings = opts.servers[server_name],
-						filetypes = (opts.servers[server_name] or {}).filetypes,
+						settings = config.settings,
+						root_dir = config.root_dir,
+						filetypes = config.filetypes,
+						single_file_support = config.single_file_support,
 					})
 				end,
 			})
