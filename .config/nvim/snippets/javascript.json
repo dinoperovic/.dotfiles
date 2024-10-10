@@ -1,12 +1,12 @@
 {
   "log": {
     "prefix": "log",
-    "body": ["console.log('$1', ${0:$1})"],
+    "body": ["console.log({$0})"],
     "description": "log a variable to the console"
   },
   "log-stringify": {
     "prefix": "logstr",
-    "body": ["console.log('$1', JSON.stringify(${0:$1}, null, 2))"],
+    "body": ["console.log('$2', JSON.stringify($1, null, 2))"],
     "description": "log a stringified variable to the console"
   },
   "stringify": {
