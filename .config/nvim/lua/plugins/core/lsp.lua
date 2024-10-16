@@ -26,7 +26,7 @@ return {
 				"html-lsp",
 				"css-lsp",
 				"eslint-lsp",
-				"prettier",
+				"prettierd",
 
 				-- python
 				"pyright",
