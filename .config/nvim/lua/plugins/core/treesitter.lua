@@ -35,7 +35,6 @@ return {
 			"gomod",
 			"gowork",
 			"gosum",
-			"templ",
 
 			-- rust
 			"ron",
@@ -100,17 +99,7 @@ return {
 			},
 		},
 	},
-	init = function()
-		vim.filetype.add({
-			extension = {
-				-- go
-				templ = "templ",
-			},
-		})
-	end,
 	config = function(_, opts)
 		require("nvim-treesitter.configs").setup(opts)
-
-		vim.keymap.set("n", "<leader>st", require("telescope.builtin").treesitter, { desc = "Search Treesitter" })
 	end,
 }

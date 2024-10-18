@@ -18,7 +18,7 @@ return {
 		},
 		opts = {
 			format_on_save = {
-				timeout_ms = 500,
+				timeout_ms = 300,
 				lsp_fallback = false,
 			},
 			formatters = {
