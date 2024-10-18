@@ -1,13 +1,13 @@
 # Base
-set PATH /usr/local/sbin ~/.local/bin $PATH
+set PATH /usr/local/sbin $HOM/.local/bin $PATH
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x EDITOR nvim
 set -x VISUAL nvim
 
 # Directories
-abbr cd. "cd ~/.dotfiles"
-abbr cdp "cd ~/Dev/projects"
-abbr cdpl "cd ~/Dev/playground"
+abbr cd. "cd $HOME/.dotfiles"
+abbr cdp "cd $HOME/Dev/projects"
+abbr cdpl "cd $HOME/Dev/playground"
 
 # eza
 set -Ux EZA_STANDARD_OPTIONS --long --all --binary --icons --group --group-directories-first
@@ -33,11 +33,15 @@ abbr py python
 abbr wp "which python"
 abbr dj "python manage.py"
 
+# Go
+set GOPATH $HOME/.go
+set PATH $HOME/.go/bin $PATH
+
 # Rust
-set PATH ~/.cargo/bin $PATH
+set PATH $HOME/.cargo/bin $PATH
 
 # Mojo
-set -x MODULAR_HOME ~/.modular
+set -x MODULAR_HOME $HOME/.modular
 set PATH $MODULAR_HOME/pkg/packages.modular.com_mojo/bin $PATH
 
 # Git
