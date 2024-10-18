@@ -16,6 +16,7 @@ return {
 				"stylua",
 				"shfmt",
 				"terraform-ls",
+				"sqlfluff",
 
 				-- frontend
 				"vtsls",

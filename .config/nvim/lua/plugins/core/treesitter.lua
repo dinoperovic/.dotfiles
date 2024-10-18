@@ -13,6 +13,7 @@ return {
 			"fish",
 			"toml",
 			"terraform",
+			"sql",
 
 			-- frontend
 			"javascript",

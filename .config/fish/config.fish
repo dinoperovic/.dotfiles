@@ -34,7 +34,7 @@ abbr wp "which python"
 abbr dj "python manage.py"
 
 # Go
-set GOPATH $HOME/.go
+set -x GOPATH $HOME/.go
 set PATH $HOME/.go/bin $PATH
 
 # Rust

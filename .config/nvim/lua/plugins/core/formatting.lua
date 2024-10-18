@@ -21,10 +21,17 @@ return {
 				timeout_ms = 500,
 				lsp_fallback = false,
 			},
+			formatters = {
+				sqlfluff = {
+					args = { "format", "--dialect=ansi", "-" },
+					require_cwd = false,
+				},
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				bash = { "shfmt" },
+				sql = { "sqlfluff" },
 
 				-- frontend
 				javascript = { "prettierd" },
