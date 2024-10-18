@@ -79,6 +79,7 @@ set -x LANG en_US.UTF-8
 test -d "$(brew --prefix)/share/google-cloud-sdk" && source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 
 # tmux
+set -Ux fish_tmux_term "tmux-256color"
 set -Ux fish_tmux_autostart false
 set -Ux fish_tmux_default_session_name dino
 

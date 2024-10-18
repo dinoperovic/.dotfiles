@@ -10,7 +10,7 @@ test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/bre
 brew update
 
 echo "### installing common packages..."
-brew install bat fzf ripgrep httpie wget stow keychain zoxide git gh
+brew install bat fzf ripgrep httpie wget stow keychain zoxide git gh luarocks
 mkdir -p ~/.config
 
 echot "### installing gpg"
